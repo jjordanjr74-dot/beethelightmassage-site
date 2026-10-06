@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bee the light massage therapy — In-Home Therapeutic Bodywork & Healing Sanctuary</title>
-  <meta name="description" content="Southern Colorado's premier mobile therapeutic bodywork. Specialized in Headaches, Back Pain, Arthritis, Deep Tissue, Senior Citizen, and Pediatric Massage in Pueblo and Colorado Springs.">
+  <meta name="description" content="Colorado-licensed, ABMP-insured therapeutic massage delivered to your home across Southern Colorado.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -15,13 +15,13 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bee the Light Massage Therapy">
   <meta property="og:title" content="Bee the Light Massage Therapy — In-Home Therapeutic Bodywork in Pueblo &amp; Colorado Springs">
-  <meta property="og:description" content="Southern Colorado's premier mobile therapeutic bodywork. Licensed, ABMP-insured, 100% woman owned. We bring the full orthopedic table and clinical touch to your door.">
-  <meta property="og:image" content="https://beethelightmassage.com/static/images/hero_sanctuary.jpg">
+  <meta property="og:description" content="Colorado-licensed, ABMP-insured mobile therapeutic massage, delivered to your home across Southern Colorado.">
+  <meta property="og:image" content="https://beethelightmassage.com/static/images/home-sanctuary.webp">
   <meta property="og:url" content="https://beethelightmassage.com/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Bee the Light Massage Therapy — In-Home Bodywork, Pueblo &amp; Colorado Springs">
   <meta name="twitter:description" content="Licensed, ABMP-insured mobile therapeutic massage brought to your door across Southern Colorado.">
-  <meta name="twitter:image" content="https://beethelightmassage.com/static/images/hero_sanctuary.jpg">
+  <meta name="twitter:image" content="https://beethelightmassage.com/static/images/home-sanctuary.webp">
   <style>
     :root {
       --bg-warm-light: #fcfaf6;
@@ -172,7 +172,7 @@
       box-shadow: var(--shadow-lg);
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      align-items: center;
+      align-items: stretch;
     }
     @media (max-width: 960px) {
       .hero-card { grid-template-columns: 1fr; }
@@ -200,7 +200,7 @@
     }
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.3rem, 4.8vw, 3.6rem);
+      font-size: clamp(2.3rem, 4vw, 3rem);
       font-weight: 800;
       line-height: 1.18;
       color: #0f172a;
@@ -209,6 +209,11 @@
       /* keep the two headline lines balanced so the second line never drops a single
          word ("Door") onto its own line - a widow reads as unfinished on a hero */
       text-wrap: balance;
+    }
+    @media (min-width: 961px) {
+      .hero-text-side { padding: 3.2rem 3.4rem; }
+      .hero-title br { display: none; }
+      .hero-media-side { min-height: 560px; }
     }
     .hero-title span {
       background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
@@ -263,29 +268,112 @@
     }
     .hero-media-side {
       position: relative;
-      height: 100%;
+      height: auto;
       min-height: 480px;
+      overflow: hidden;
     }
     .hero-media-side img {
+      position: absolute;
+      inset: 0;
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: 57% center;
     }
     .hero-media-badge {
       position: absolute;
-      bottom: 24px;
-      right: 24px;
-      background: rgba(255, 255, 255, 0.94);
-      border: 1px solid var(--border-gold);
-      border-radius: 14px;
-      padding: 12px 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: #92400e;
+      bottom: 22px;
+      left: 22px;
+      right: auto;
+      max-width: calc(100% - 44px);
+      background: rgba(255, 252, 246, 0.96);
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 12px;
+      padding: 10px 14px;
+      box-shadow: 0 8px 24px rgba(35, 31, 23, .16);
+      display: grid;
+      gap: 2px;
+    }
+    .image-note {
+      color: #686354;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .hero-offer {
+      color: #5b3b19;
+      font-size: .84rem;
+      font-weight: 800;
+    }
+    .eyebrow-rule {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+    }
+    .eyebrow-rule::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+      opacity: .7;
+    }
+    .cta-note {
+      margin-top: 1rem;
+      color: #596154;
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+    .section-header h2 { text-wrap: balance; }
+    .section-header p { max-width: 62ch; margin-inline: auto; }
+    .dispatch-box { align-items: center; }
+    .btn-main-cta:focus-visible, .btn-sub-cta:focus-visible,
+    .btn-reserve-nav:focus-visible, .specialty-btn:focus-visible,
+    a:focus-visible { outline: 3px solid #365f4a; outline-offset: 3px; }
+    @media (max-width: 960px) {
+      .hero-media-side { height: 390px; min-height: 390px; }
+      .hero-media-side img { min-height: 0; max-height: none; }
+    }
+    @media (max-width: 600px) {
+      .header-content { padding: .65rem 1rem; }
+      .brand { gap: 8px; }
+      .brand-logo-img { width: 48px; height: 48px; }
+      .brand-name { font-size: 1.02rem; line-height: 1.15; }
+      .header-actions { gap: 8px; }
+      .header-actions .geo-tag { display: none; }
+      .btn-reserve-nav { padding: 10px 12px; font-size: .8rem; }
+      .hero-wrap { margin: 1rem auto 2.5rem; padding: 0 .75rem; }
+      .hero-card { border-radius: 18px; }
+      .hero-text-side { padding: 1.6rem 1.2rem 1.4rem; }
+      .hero-badge-pill { font-size: .72rem; line-height: 1.35; padding: 7px 11px; margin-bottom: 1rem; }
+      .hero-title { font-size: clamp(2rem, 9vw, 2.7rem); line-height: 1.1; }
+      .hero-desc { font-size: 1rem; margin-bottom: 1.4rem; }
+      .hero-action-group { gap: 10px; }
+      .hero-action-group a { min-height: 48px; justify-content: center; width: 100%; padding: .85rem 1rem; }
+      .hero-media-side { height: 265px; min-height: 265px; }
+      .hero-media-side img { min-height: 0; max-height: none; }
+      .hero-media-badge { bottom: 12px; left: 12px; max-width: calc(100% - 24px); padding: 8px 10px; }
+      .hero-offer { font-size: .75rem; }
+      .healing-value-strip { grid-template-columns: 1fr; gap: .7rem; margin-bottom: 3rem; padding: 0 1rem; }
+      .value-card { padding: .95rem; }
+      .value-icon-box { width: 42px; height: 42px; font-size: 1.15rem; }
+      .specialties-section, .gallery-strip, .pricing-wrap, .dispatch-wrap, .reviews-wrap { padding-inline: 1rem; margin-bottom: 3.25rem; }
+      .specialties-grid, .pricing-grid, .reviews-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .specialty-card { padding: 1.35rem; }
+      .price-card { padding: 2rem 1.4rem 1.4rem; }
+      .section-header { margin-bottom: 1.7rem; }
+      .section-header h2 { font-size: clamp(1.8rem, 7vw, 2.3rem); }
+      .dispatch-box { padding: 1.35rem; gap: 1.4rem; }
+      .field-row { gap: .8rem; }
+      .reviews-grid { min-width: 0; }
+      .review-box { padding: 1.4rem; }
+      footer { padding: 2.25rem 1rem; }
+      .regulatory-badge { line-height: 1.6; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
 
     /* Healing Value Strip (Highlights: Complimentary Hot Stones) */
@@ -858,9 +946,9 @@
  "@context": "https://schema.org",
  "@type": "HealthAndBeautyBusiness",
  "name": "Bee the Light Massage Therapy",
- "description": "Southern Colorado's premier mobile therapeutic bodywork. Specialized in headaches, back pain, arthritis, deep tissue, senior citizen and pediatric massage, delivered in your home.",
+ "description": "Colorado-licensed, ABMP-insured therapeutic massage delivered to your home across Southern Colorado.",
  "url": "https://beethelightmassage.com/",
- "image": "https://beethelightmassage.com/static/images/hero_sanctuary.jpg",
+ "image": "https://beethelightmassage.com/static/images/home-sanctuary.webp",
  "telephone": "+14024992936",
  "priceRange": "$$",
  "areaServed": [
@@ -953,13 +1041,13 @@
     <div class="hero-card">
       <div class="hero-text-side">
         <div class="hero-badge-pill">
-          ✨ 100% Woman Owned and Operated Business · Licensed Colorado Therapeutic Care
+          ✨ Colorado-licensed · ABMP-insured · Woman-owned
         </div>
         <h1 class="hero-title">
-          A Place of Tranquility &amp; Healing<br><span>Delivered to Your Door</span>
+          Therapeutic massage,<br><span>delivered to your door.</span>
         </h1>
         <p class="hero-desc">
-          Step away from traffic and crowded clinics. We bring our full orthopedic table, all-natural handcrafted body butters, soothing acoustic ambiance, and dedicated clinical touch directly to your home in Pueblo, Cañon City, and Colorado Springs.
+          Enjoy focused therapeutic care at home, with a professional massage table and fresh linens brought to you—so you can relax without a drive back after your session.
         </p>
         <div class="hero-action-group">
           <a href="#booking-section" class="btn-main-cta">
@@ -968,11 +1056,13 @@
           </a>
           <a href="#specialties-section" class="btn-sub-cta">Explore Clinical Specialties</a>
         </div>
+        <p class="cta-note">Licensed, ABMP-insured care at home · Serving Pueblo, Pueblo West, Cañon City, Fountain &amp; Colorado Springs</p>
       </div>
       <div class="hero-media-side">
-        <img src="static/images/hero_sanctuary.webp" onerror="this.src='static/images/hero_massage.webp'" alt="Serene In-Home Sanctuary" loading="lazy" decoding="async" width="1600" height="1067">
-        <div class="hero-media-badge">
-          🪨 Complimentary Hot Stones Upon Request
+        <img src="static/images/home-sanctuary.webp" alt="Illustrative home massage treatment room with a portable table" width="1376" height="768" fetchpriority="high" decoding="async" loading="eager">
+        <div class="hero-media-badge" aria-label="Illustrative treatment-room scene; complimentary hot stones available on request">
+          <span class="image-note">Illustrative room scene</span>
+          <span class="hero-offer">Complimentary hot stones on request</span>
         </div>
       </div>
     </div>
@@ -1223,16 +1313,16 @@
   <div class="gallery-strip">
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="static/images/hot_stones.webp" onerror="this.src='static/images/candle_calm.webp'" alt="Hot Stones Therapy" loading="lazy" decoding="async" width="1600" height="1067">
-        <div class="gallery-label">Complimentary Warm Basalt River Stones</div>
+        <img src="static/images/treatment-details.webp" alt="A bowl of basalt stones and folded towels beside a massage table; illustrative treatment-room still life" loading="lazy" decoding="async" width="1376" height="768">
+        <div class="gallery-label">A considered setup for your in-home session</div>
       </div>
       <div class="gallery-item">
-        <img src="static/images/organic_botanicals.webp" onerror="this.src='static/images/spa_stones_hands.webp'" alt="Organic Botanicals" loading="lazy" decoding="async" width="1600" height="2400">
-        <div class="gallery-label">All-Natural Handcrafted Body Butters &amp; Aromatherapy</div>
+        <img src="static/images/organic_botanicals.webp" onerror="this.src='static/images/organic_botanicals.webp'" alt="Natural oils and botanicals used in a calming treatment setting" loading="lazy" decoding="async" width="1600" height="2400">
+        <div class="gallery-label">A quieter, more restorative space at home</div>
       </div>
       <div class="gallery-item">
-        <img src="static/images/clinical_therapy.webp" onerror="this.src='static/images/therapy_back.webp'" alt="Clinical Therapy" loading="lazy" decoding="async" width="1600" height="1068">
-        <div class="gallery-label">Orthopedic Mobility &amp; Restorative Care</div>
+        <img src="static/images/clinical_therapy.webp" onerror="this.src='static/images/clinical_therapy.webp'" alt="Illustrative massage treatment detail" loading="lazy" decoding="async" width="1600" height="1068">
+        <div class="gallery-label">Thoughtful care, shaped around your needs</div>
       </div>
     </div>
   </div>
@@ -1409,80 +1499,6 @@
       </p>
     </footer>
 
-  <script>
-    // Auto-set date to tomorrow
-    const d = new Date();
-    d.setDate(d.getDate() + 1);
-    const dateInput = document.getElementById('prefDate');
-    if (dateInput) dateInput.value = d.toISOString().split('T')[0];
 
-    const packageRates = { '60MIN': 115, '90MIN': 160, '5PACK': 475 };
-    const travelRates = { 'Pueblo': 0, 'Pueblo West': 0, 'Canon City': 20, 'Fountain': 15, 'Colorado Springs': 25 };
-
-    function setPackage(pkg, price) {
-      const sel = document.getElementById('pkgSelect');
-      if (sel) {
-        sel.value = pkg;
-        calculateTotal();
-        document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
-    function selectSpecialty(spec) {
-      const sel = document.getElementById('focusSelect');
-      if (sel) {
-        sel.value = spec;
-        updateSummaryFocus();
-        document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
-    function setTime(el, timeSlot) {
-      document.querySelectorAll('.time-slot-btn').forEach(btn => btn.classList.remove('active'));
-      el.classList.add('active');
-      document.getElementById('timeSelect').value = timeSlot;
-    }
-
-    function updateSummaryFocus() {
-      const sel = document.getElementById('focusSelect');
-      document.getElementById('sumFocusName').innerText = sel.options[sel.selectedIndex].text;
-    }
-
-    function calculateTotal() {
-      const pkg = document.getElementById('pkgSelect').value;
-      const city = document.getElementById('geoSelect').value;
-
-      const base = packageRates[pkg] || 160;
-      const travel = travelRates[city] || 0;
-      const total = base + travel;
-
-      document.getElementById('sumTierName').innerText = pkg === '60MIN' ? '60-Min Restorative' : (pkg === '90MIN' ? '90-Min Deep Recovery' : '5-Session Family Pass');
-      document.getElementById('sumBasePrice').innerText = `$${base.toFixed(2)}`;
-      document.getElementById('sumTravelFee').innerText = travel === 0 ? `$0.00 (${city})` : `+$${travel}.00 (${city})`;
-      document.getElementById('sumGrandTotal').innerText = `$${total.toFixed(2)}`;
-    }
-
-    // Auto-set consent date
-    const consentDate = document.getElementById('consentDateInput');
-    if (consentDate) consentDate.value = new Date().toISOString().split('T')[0];
-
-    function setPressure(btn, val) {
-      document.querySelectorAll('.pressure-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('pressureInput').value = val;
-      document.getElementById('pressureLabel').innerText = val;
-    }
-
-    function updateMedConditions() {
-      const checked = Array.from(document.querySelectorAll('input[name="med_cond"]:checked')).map(cb => cb.value);
-      const notes = document.querySelector('input[name="medical_conditions_notes"]')?.value.trim();
-      let res = checked.join(', ');
-      if (notes) res = res ? `${res}; Notes: ${notes}` : notes;
-      document.getElementById('medicalConditionsHidden').value = res || 'None specified';
-    }
-
-    calculateTotal();
-    updateSummaryFocus();
-  </script>
 </body>
 </html>
