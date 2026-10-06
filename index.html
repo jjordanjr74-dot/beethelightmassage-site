@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bee the light massage therapy — In-Home Therapeutic Bodywork & Healing Sanctuary</title>
+  <meta name="description" content="Southern Colorado's premier mobile therapeutic bodywork. Specialized in Headaches, Back Pain, Arthritis, Deep Tissue, Senior Citizen, and Pediatric Massage in Pueblo and Colorado Springs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="static/images/bee_logo_square.png">
+  <link rel="apple-touch-icon" href="static/images/bee_logo_square.png">
+  <meta name="theme-color" content="#d97706">
+  <link rel="canonical" href="https://beethelightmassage.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bee the Light Massage Therapy">
+  <meta property="og:title" content="Bee the Light Massage Therapy — In-Home Therapeutic Bodywork in Pueblo &amp; Colorado Springs">
+  <meta property="og:description" content="Southern Colorado's premier mobile therapeutic bodywork. Licensed, ABMP-insured, 100% woman owned. We bring the full orthopedic table and clinical touch to your door.">
+  <meta property="og:image" content="https://beethelightmassage.com/static/images/hero_sanctuary.jpg">
+  <meta property="og:url" content="https://beethelightmassage.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bee the Light Massage Therapy — In-Home Bodywork, Pueblo &amp; Colorado Springs">
+  <meta name="twitter:description" content="Licensed, ABMP-insured mobile therapeutic massage brought to your door across Southern Colorado.">
+  <meta name="twitter:image" content="https://beethelightmassage.com/static/images/hero_sanctuary.jpg">
+  <style>
+    :root {
+      --bg-warm-light: #fcfaf6;
+      --bg-card: #ffffff;
+      --bg-cream: #fff9f0;
+      --honey-gold: #d97706;
+      --honey-light: #fbbf24;
+      --honey-pale: #fef3c7;
+      --honey-glow: rgba(245, 158, 11, 0.18);
+      --healing-sage: #059669;
+      --sage-light: #ecfdf5;
+      --sage-border: rgba(5, 150, 105, 0.22);
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-subtle: #e2e8f0;
+      --border-gold: #fde68a;
+      --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 12px 30px rgba(217, 119, 6, 0.08);
+      --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.07);
+      --radius-lg: 20px;
+      --radius-md: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-warm-light);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.65;
+    }
+
+    /* Ambient Warm Healing Glow */
+    .ambient-sunbeam {
+      position: fixed;
+      top: -160px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(254, 243, 199, 0.75) 0%, rgba(252, 250, 246, 0) 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Sticky Sanctuary Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .header-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-logo-img {
+      width: 72px;
+      height: 72px;
+      border-radius: 14px;
+      object-fit: contain;
+      background: #ffffff;
+      box-shadow: 0 4px 18px var(--honey-glow);
+      border: 1.5px solid var(--border-gold);
+      padding: 2px;
+    }
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--honey-light) 0%, var(--honey-gold) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 12px var(--honey-glow);
+    }
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.4px;
+    }
+    .brand-name span {
+      color: var(--honey-gold);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .geo-tag {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--sage-light);
+      border: 1px solid var(--sage-border);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--healing-sage);
+    }
+    .btn-reserve-nav {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 9px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 14px var(--honey-glow);
+      transition: all 0.2s;
+    }
+    .btn-reserve-nav:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(217, 119, 6, 0.25);
+    }
+
+    /* Hero Section — Bright & Tranquil */
+    .hero-wrap {
+      position: relative;
+      max-width: 1280px;
+      margin: 2.5rem auto 4.5rem;
+      padding: 0 2rem;
+      z-index: 1;
+    }
+    .hero-card {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid var(--border-gold);
+      background: #ffffff;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+    }
+    @media (max-width: 960px) {
+      .hero-card { grid-template-columns: 1fr; }
+    }
+    .hero-text-side {
+      padding: 4rem;
+      position: relative;
+      z-index: 2;
+    }
+    @media (max-width: 768px) {
+      .hero-text-side { padding: 2.5rem 1.8rem; }
+    }
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--honey-pale);
+      border: 1px solid var(--honey-light);
+      color: #92400e;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.4rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.3rem, 4.8vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.18;
+      color: #0f172a;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.6px;
+      /* keep the two headline lines balanced so the second line never drops a single
+         word ("Door") onto its own line - a widow reads as unfinished on a hero */
+      text-wrap: balance;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      font-size: 1.15rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 2.2rem;
+    }
+    .hero-action-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn-main-cta {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 1.1rem 2.2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 8px 24px var(--honey-glow);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s;
+    }
+    .btn-main-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(217, 119, 6, 0.3);
+    }
+    .btn-sub-cta {
+      background: #f8fafc;
+      color: #334155;
+      border: 1px solid var(--border-subtle);
+      font-size: 1.02rem;
+      font-weight: 700;
+      padding: 1.1rem 1.8rem;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-sub-cta:hover {
+      background: #ffffff;
+      border-color: var(--honey-light);
+      color: var(--honey-gold);
+    }
+    .hero-media-side {
+      position: relative;
+      height: 100%;
+      min-height: 480px;
+    }
+    .hero-media-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-media-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      padding: 12px 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #92400e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Healing Value Strip (Highlights: Complimentary Hot Stones) */
+    .healing-value-strip {
+      max-width: 1280px;
+      margin: 0 auto 4.5rem;
+      padding: 0 2rem;
+      display: grid;
+      /* 220px min so all FIVE value cards sit on one row at desktop width.
+         At 260px only four fit in the 1216px content box (5 x 260 + 4 x 24 gap = 1396 > 1216),
+         so the 5th card orphaned onto its own row - the classic "not quite finished" tell. */
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .value-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .value-card.highlight {
+      border-color: var(--honey-light);
+      background: linear-gradient(135deg, #ffffff 0%, #fffbf0 100%);
+      box-shadow: 0 8px 25px var(--honey-glow);
+    }
+    .value-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--honey-gold);
+    }
+    .value-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--honey-pale);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .value-icon-box.green {
+      background: var(--sage-light);
+      border-color: var(--sage-border);
+    }
+    .value-text h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+    .value-text p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 3.2rem;
+      padding: 0 1.5rem;
+    }
+    .kicker-sub {
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--healing-sage);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.4px;
+    }
+    .section-header p {
+      font-size: 1.08rem;
+      color: #475569;
+      line-height: 1.65;
+    }
+
+    /* Real-World Specialties Grid (Headaches, Back Pain, Arthritis, Deep Tissue, Senior Citizen, Pediatric) */
+    .specialties-section {
+      max-width: 1280px;
+      margin: 0 auto 5.5rem;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .specialties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.8rem;
+    }
+    .specialty-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .specialty-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--honey-light);
+      box-shadow: var(--shadow-md);
+    }
+    .specialty-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 1.1rem;
+    }
+    .specialty-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--honey-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .specialty-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .specialty-desc {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+    }
+    .specialty-pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 1.4rem;
+    }
+    .specialty-pill {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .specialty-btn {
+      color: var(--honey-gold);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .specialty-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* Atmosphere Imagery Gallery */
+    .gallery-strip {
+      max-width: 1280px;
+      margin: 0 auto 5.5rem;
+      padding: 0 2rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 860px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      height: 270px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-subtle);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+    .gallery-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.2rem;
+      background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.85) 100%);
+      color: #ffffff;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    /* Curated Service Packages */
+    .pricing-wrap {
+      max-width: 1280px;
+      margin: 0 auto 5.5rem;
+      padding: 0 2rem;
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 2rem;
+    }
+    .price-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.8rem 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s;
+    }
+    .price-card.featured {
+      border: 2px solid var(--honey-light);
+      background: linear-gradient(180deg, #fffdf8 0%, #ffffff 100%);
+      box-shadow: var(--shadow-md);
+    }
+    .price-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .popular-tag {
+      position: absolute;
+      top: -14px;
+      right: 28px;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 12px var(--honey-glow);
+    }
+    .package-name {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 0.4rem;
+    }
+    .package-desc {
+      font-size: 0.92rem;
+      color: #64748b;
+      margin-bottom: 1.8rem;
+    }
+    .package-price {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--honey-gold);
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 1.8rem;
+    }
+    .package-price span {
+      font-size: 1rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+    .feature-list {
+      list-style: none;
+      margin-bottom: 2.2rem;
+    }
+    .feature-list li {
+      margin-bottom: 0.85rem;
+      font-size: 0.94rem;
+      color: #334155;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .check-green {
+      color: var(--healing-sage);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* Live Booking & Dispatch Form */
+    .dispatch-wrap {
+      max-width: 1280px;
+      margin: 0 auto 5.5rem;
+      padding: 0 2rem;
+    }
+    .dispatch-box {
+      background: #ffffff;
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 3rem;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 3.5rem;
+    }
+    @media (max-width: 900px) {
+      .dispatch-box { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+    }
+    .form-group-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+    .form-group-sub {
+      color: #64748b;
+      font-size: 0.95rem;
+      margin-bottom: 1.8rem;
+    }
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.1rem;
+    }
+    @media (max-width: 600px) {
+      .field-row { grid-template-columns: 1fr; }
+    }
+    .field-label {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 0.45rem;
+    }
+    .form-control {
+      width: 100%;
+      background: #f8fafc;
+      border: 1px solid var(--border-subtle);
+      color: #0f172a;
+      padding: 0.95rem 1.2rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .form-control:focus {
+      outline: none;
+      background: #ffffff;
+      border-color: var(--honey-gold);
+      box-shadow: 0 0 0 3px var(--honey-glow);
+    }
+    .time-slot-picker {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 1.2rem;
+    }
+    .time-slot-btn {
+      background: #f1f5f9;
+      border: 1px solid var(--border-subtle);
+      color: #475569;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .time-slot-btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+    .time-slot-btn.active {
+      background: var(--honey-gold);
+      color: #ffffff;
+      border-color: var(--honey-gold);
+    }
+    .pressure-picker {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    @media (max-width: 600px) {
+      .pressure-picker {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .pressure-btn {
+      background: #f8fafc;
+      border: 1.5px solid var(--border-subtle);
+      color: #334155;
+      padding: 0.65rem 0.5rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .pressure-btn:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+    .pressure-btn.active {
+      background: #fef3c7;
+      color: #92400e;
+      border-color: var(--honey-gold);
+    }
+    .hot-stones-checkbox-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.4rem;
+      cursor: pointer;
+    }
+    .hot-stones-checkbox-card input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--honey-gold);
+      cursor: pointer;
+    }
+    .hot-stones-text h5 {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 2px;
+    }
+    .hot-stones-text p {
+      font-size: 0.82rem;
+      color: #78350f;
+    }
+
+    /* Summary Card */
+    .summary-card {
+      background: linear-gradient(180deg, #fffbf0 0%, #ffffff 100%);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-md);
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+    }
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    .summary-item strong {
+      color: #0f172a;
+    }
+    .summary-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-top: 2px dashed #fde68a;
+      padding-top: 1.2rem;
+      margin-top: 1.2rem;
+    }
+    .summary-total-label {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .summary-total-amount {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--honey-gold);
+    }
+
+    /* Verified Reviews */
+    .reviews-wrap {
+      max-width: 1280px;
+      margin: 0 auto 5.5rem;
+      padding: 0 2rem;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+    }
+    .review-box {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .review-stars {
+      color: #f59e0b;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      letter-spacing: 2px;
+    }
+    .review-quote {
+      font-size: 0.96rem;
+      color: #334155;
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+    }
+    .review-author {
+      font-weight: 800;
+      color: #0f172a;
+      font-size: 0.95rem;
+    }
+    .review-context {
+      font-size: 0.82rem;
+      color: var(--healing-sage);
+      font-weight: 600;
+    }
+
+    /* Footer & DORA Disclosures */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 3.5rem 2rem;
+      text-align: center;
+      background: #ffffff;
+      color: #64748b;
+      font-size: 0.88rem;
+      width: 100%;
+    }
+    .regulatory-badge {
+      display: inline-block;
+      margin-bottom: 1.2rem;
+      padding: 6px 18px;
+      background: var(--sage-light);
+      border: 1px solid var(--sage-border);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      color: var(--healing-sage);
+      font-weight: 700;
+    }
+    footer a {
+      color: var(--honey-gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-sunbeam"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <a href="#" class="brand">
+        <img src="static/images/bee_logo_square.png" alt="Golden Bee and Rose Laurel Logo" class="brand-logo-img">
+        <div class="brand-name">Bee the light <span>massage therapy</span></div>
+      </a>
+      <div class="header-actions">
+        <div class="geo-tag" style="background: rgba(245, 158, 11, 0.12); color: #b45309; border-color: rgba(245, 158, 11, 0.3); font-weight: 700;">
+          🌸 Woman-Owned &amp; Operated
+        </div>
+        <div class="geo-tag">
+          📍 Pueblo, Cañon City &amp; Springs Fleet
+        </div>
+        <a href="#booking-section" class="btn-reserve-nav">Book In-Home Sanctuary</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-wrap">
+    <div class="hero-card">
+      <div class="hero-text-side">
+        <div class="hero-badge-pill">
+          ✨ 100% Woman Owned and Operated Business · Licensed Colorado Therapeutic Care
+        </div>
+        <h1 class="hero-title">
+          A Place of Tranquility &amp; Healing<br><span>Delivered to Your Door</span>
+        </h1>
+        <p class="hero-desc">
+          Step away from traffic and crowded clinics. We bring our full orthopedic table, all-natural handcrafted body butters, soothing acoustic ambiance, and dedicated clinical touch directly to your home in Pueblo, Cañon City, and Colorado Springs.
+        </p>
+        <div class="hero-action-group">
+          <a href="#booking-section" class="btn-main-cta">
+            Reserve Your Session
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#specialties-section" class="btn-sub-cta">Explore Clinical Specialties</a>
+        </div>
+      </div>
+      <div class="hero-media-side">
+        <img src="static/images/hero_sanctuary.jpg" onerror="this.src='https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1600&q=85'" alt="Serene In-Home Sanctuary">
+        <div class="hero-media-badge">
+          🪨 Complimentary Hot Stones Upon Request
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Healing Value Strip -->
+  <div class="healing-value-strip">
+    <div class="value-card highlight">
+      <div class="value-icon-box">🌸</div>
+      <div class="value-text">
+        <h4>Woman-Owned &amp; Operated</h4>
+        <p>Dedicated local compassionate care rooted in Colorado.</p>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon-box">🪨</div>
+      <div class="value-text">
+        <h4>Complimentary Hot Stones</h4>
+        <p>Available on any session upon request at zero charge.</p>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon-box green">🧈</div>
+      <div class="value-text">
+        <h4>All-Natural Handcrafted Body Butters</h4>
+        <p>Pure, nutrient-rich artisanal whipped formulas.</p>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon-box">🏡</div>
+      <div class="value-text">
+        <h4>Zero Clinic Commute</h4>
+        <p>Stay deeply relaxed in your own space after session.</p>
+      </div>
+    </div>
+    <div class="value-card">
+      <div class="value-icon-box green">⏱️</div>
+      <div class="value-text">
+        <h4>Punctual 2-Hour Windows</h4>
+        <p>Reliable mobile therapist dispatch across 60 miles.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Real-World Specialties Section -->
+  <section id="specialties-section" class="specialties-section">
+    <div class="section-header">
+      <span class="kicker-sub">Superlative Client Satisfaction</span>
+      <h2>Real-World Clinical &amp; Restorative Specialties</h2>
+      <p>Every body has a unique story. Our licensed therapists apply targeted orthopedic methods to mitigate chronic pain, restore comfortable mobility, and foster peaceful restorative healing.</p>
+    </div>
+
+    <div class="specialties-grid">
+      
+      <!-- 1. Headaches -->
+      <div class="specialty-card">
+        <div>
+          <div class="specialty-top">
+            <div class="specialty-icon">💆‍♀️</div>
+            <div>
+              <div class="specialty-title">Headaches &amp; Migraines</div>
+            </div>
+          </div>
+          <p class="specialty-desc">
+            Focused suboccipital decompression, cervical paraspinal mobilization, and temporomandibular release to dissolve chronic tension headaches and screen-induced strain.
+          </p>
+          <div class="specialty-pill-list">
+            <span class="specialty-pill">Cervical Release</span>
+            <span class="specialty-pill">Suboccipital Relief</span>
+            <span class="specialty-pill">TMJ Comfort</span>
+          </div>
+        </div>
+        <a href="#booking-section" onclick="selectSpecialty('Headaches')" class="specialty-btn">Book for Headache Relief →</a>
+      </div>
+
+      <!-- 2. Back Pain -->
+      <div class="specialty-card">
+        <div>
+          <div class="specialty-top">
+            <div class="specialty-icon">🩺</div>
+            <div>
+              <div class="specialty-title">Back Pain &amp; Sciatica</div>
+            </div>
+          </div>
+          <p class="specialty-desc">
+            Gentle spinal paraspinal mobilization, piriformis release, and lumbar myofascial lengthening to relieve nerve compression, stiffness, and chronic desk fatigue.
+          </p>
+          <div class="specialty-pill-list">
+            <span class="specialty-pill">Lumbar Decompression</span>
+            <span class="specialty-pill">Sciatic Nerve Relief</span>
+            <span class="specialty-pill">Posture Reset</span>
+          </div>
+        </div>
+        <a href="#booking-section" onclick="selectSpecialty('Back Pain')" class="specialty-btn">Book for Back Pain Relief →</a>
+      </div>
+
+      <!-- 3. Arthritis -->
+      <div class="specialty-card">
+        <div>
+          <div class="specialty-top">
+            <div class="specialty-icon">🤲</div>
+            <div>
+              <div class="specialty-title">Arthritis &amp; Joint Mobility</div>
+            </div>
+          </div>
+          <p class="specialty-desc">
+            Gentle passive range-of-motion stretching and circulation-enhancing strokes that ease joint stiffness, soothe chronic inflammation, and restore pain-free movement.
+          </p>
+          <div class="specialty-pill-list">
+            <span class="specialty-pill">Joint Mobilization</span>
+            <span class="specialty-pill">Circulation Flow</span>
+            <span class="specialty-pill">Anti-Inflammatory</span>
+          </div>
+        </div>
+        <a href="#booking-section" onclick="selectSpecialty('Arthritis')" class="specialty-btn">Book for Arthritis Support →</a>
+      </div>
+
+      <!-- 4. Deep Tissue -->
+      <div class="specialty-card">
+        <div>
+          <div class="specialty-top">
+            <div class="specialty-icon">⚡</div>
+            <div>
+              <div class="specialty-title">Deep Tissue &amp; Myofascial</div>
+            </div>
+          </div>
+          <p class="specialty-desc">
+            Precise trigger-point therapy and deep cross-fiber friction to melt persistent muscular adhesions, knots, and post-athletic tension with restorative firmness.
+          </p>
+          <div class="specialty-pill-list">
+            <span class="specialty-pill">Trigger Point Release</span>
+            <span class="specialty-pill">Myofascial Adhesions</span>
+            <span class="specialty-pill">Athletic Recovery</span>
+          </div>
+        </div>
+        <a href="#booking-section" onclick="selectSpecialty('Deep Tissue')" class="specialty-btn">Book for Deep Tissue →</a>
+      </div>
+
+      <!-- 5. Senior Citizen -->
+      <div class="specialty-card">
+        <div>
+          <div class="specialty-top">
+            <div class="specialty-icon">🌸</div>
+            <div>
+              <div class="specialty-title">Senior Citizen Restorative</div>
+            </div>
+          </div>
+          <p class="specialty-desc">
+            Compassionate, gentle touch therapy designed for mature adults. Promotes lymph circulation, eases muscular aches, supports peaceful sleep, and enhances vitality.
+          </p>
+          <div class="specialty-pill-list">
+            <span class="specialty-pill">Gentle Geriatric Touch</span>
+            <span class="specialty-pill">Circulation Flow</span>
+            <span class="specialty-pill">Sleep &amp; Comfort</span>
+          </div>
+        </div>
+        <a href="#booking-section" onclick="selectSpecialty('Senior Citizen')" class="specialty-btn">Book Senior Wellness →</a>
+      </div>
+
+      <!-- 6. Pediatric Massage -->
+      <div class="specialty-card">
+        <div>
+          <div class="specialty-top">
+            <div class="specialty-icon">🌱</div>
+            <div>
+              <div class="specialty-title">Pediatric Massage</div>
+            </div>
+          </div>
+          <p class="specialty-desc">
+            Calming, age-appropriate touch therapy for children and teens. Eases growing pains, athletic sports aches, nervous system tension, and promotes grounded restful sleep.
+          </p>
+          <div class="specialty-pill-list">
+            <span class="specialty-pill">Growing Pains</span>
+            <span class="specialty-pill">Nervous System Calm</span>
+            <span class="specialty-pill">Youth Athletic Support</span>
+          </div>
+        </div>
+        <a href="#booking-section" onclick="selectSpecialty('Pediatric Massage')" class="specialty-btn">Book Pediatric Session →</a>
+      </div>
+
+      <!-- 7. Athletes -->
+      <div class="specialty-card">
+        <div>
+          <div class="specialty-top">
+            <div class="specialty-icon">🏃</div>
+            <div>
+              <div class="specialty-title">Athletes &amp; Sports Performance</div>
+            </div>
+          </div>
+          <p class="specialty-desc">
+            Biomechanical flushing, lactic acid clearance, active recovery stretching, and muscle group restoration for endurance runners, cyclists, crossfitters, and competitive athletes.
+          </p>
+          <div class="specialty-pill-list">
+            <span class="specialty-pill">Lactic Acid Flush</span>
+            <span class="specialty-pill">Mobility &amp; Range</span>
+            <span class="specialty-pill">Pre/Post Event</span>
+          </div>
+        </div>
+        <a href="#booking-section" onclick="selectSpecialty('Athletes')" class="specialty-btn">Book Athlete Recovery →</a>
+      </div>
+
+      <!-- 8. Hospice Massage -->
+      <div class="specialty-card">
+        <div>
+          <div class="specialty-top">
+            <div class="specialty-icon">🕊️</div>
+            <div>
+              <div class="specialty-title">Hospice &amp; Palliative Care</div>
+            </div>
+          </div>
+          <p class="specialty-desc">
+            Dignified, deeply compassionate gentle touch therapy for palliative and end-of-life care. Eases physical discomfort, softens muscle guarding, and fosters tranquil peaceful serenity.
+          </p>
+          <div class="specialty-pill-list">
+            <span class="specialty-pill">Palliative Comfort</span>
+            <span class="specialty-pill">Compassionate Touch</span>
+            <span class="specialty-pill">Dignity &amp; Peace</span>
+          </div>
+        </div>
+        <a href="#booking-section" onclick="selectSpecialty('Hospice Care')" class="specialty-btn">Book Hospice Sanctuary →</a>
+      </div>
+
+      <!-- 9. Post-Surgical Therapy -->
+      <div class="specialty-card">
+        <div>
+          <div class="specialty-top">
+            <div class="specialty-icon">🩺</div>
+            <div>
+              <div class="specialty-title">Post-Surgical Muscle Release</div>
+            </div>
+          </div>
+          <p class="specialty-desc">
+            Targeted myofascial release and gentle mobilization to relieve guarded compensatory muscle tension, ease post-operative stiffness, and safely restore natural muscular mobility.
+          </p>
+          <div class="specialty-pill-list">
+            <span class="specialty-pill">Muscle Release</span>
+            <span class="specialty-pill">Compensatory Relief</span>
+            <span class="specialty-pill">Mobility Restoration</span>
+          </div>
+        </div>
+        <a href="#booking-section" onclick="selectSpecialty('Post-Surgical')" class="specialty-btn">Book Post-Surgical Care →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Atmosphere Gallery -->
+  <div class="gallery-strip">
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="static/images/hot_stones.jpg" onerror="this.src='https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=85'" alt="Hot Stones Therapy">
+        <div class="gallery-label">Complimentary Warm Basalt River Stones</div>
+      </div>
+      <div class="gallery-item">
+        <img src="static/images/organic_botanicals.jpg" onerror="this.src='https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1600&q=85'" alt="Organic Botanicals">
+        <div class="gallery-label">All-Natural Handcrafted Body Butters &amp; Aromatherapy</div>
+      </div>
+      <div class="gallery-item">
+        <img src="static/images/clinical_therapy.jpg" onerror="this.src='https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=1600&q=85'" alt="Clinical Therapy">
+        <div class="gallery-label">Orthopedic Mobility &amp; Restorative Care</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Curated Packages -->
+  <section class="pricing-wrap">
+    <div class="section-header">
+      <span class="kicker-sub">Clear &amp; Transparent Rates</span>
+      <h2>Curated In-Home Bodywork Packages</h2>
+      <p>All sessions include full orthopedic table setup, clean linens, all-natural handcrafted body butters, and complimentary hot stones upon request.</p>
+    </div>
+
+    <div class="pricing-grid">
+      
+      <!-- 60MIN -->
+      <div class="price-card">
+        <div>
+          <div class="package-name">60-Min Restorative</div>
+          <div class="package-desc">Focused therapeutic session targeting your primary area of discomfort.</div>
+          <div class="package-price">$115 <span>/ session</span></div>
+          <ul class="feature-list">
+            <li><span class="check-green">✓</span> Complete in-home orthopedic table &amp; linens</li>
+            <li><span class="check-green">✓</span> <strong>Complimentary hot stones upon request</strong></li>
+            <li><span class="check-green">✓</span> All-natural handcrafted whipped body butters</li>
+            <li><span class="check-green">✓</span> 100% Free travel in Pueblo &amp; Pueblo West</li>
+          </ul>
+        </div>
+        <button onclick="setPackage('60MIN', 115)" class="btn-sub-cta" style="width: 100%; text-align: center;">Select 60-Min ($115)</button>
+      </div>
+
+      <!-- 90MIN -->
+      <div class="price-card featured">
+        <div class="popular-tag">Most Popular Sanctuary</div>
+        <div>
+          <div class="package-name">90-Min Deep Recovery</div>
+          <div class="package-desc">Our flagship comprehensive full-body session for deep restorative healing.</div>
+          <div class="package-price">$160 <span>/ session</span></div>
+          <ul class="feature-list">
+            <li><span class="check-green">✓</span> Full-body myofascial release &amp; joint mobilization</li>
+            <li><span class="check-green">✓</span> <strong>Complimentary hot stones upon request</strong></li>
+            <li><span class="check-green">✓</span> Headaches, back pain &amp; arthritis relief</li>
+            <li><span class="check-green">✓</span> Pueblo, Pueblo West, Cañon City, Fountain &amp; Springs</li>
+            <li><span class="check-green">✓</span> Unhurried post-session rest in your home</li>
+          </ul>
+        </div>
+        <button onclick="setPackage('90MIN', 160)" class="btn-main-cta" style="width: 100%; justify-content: center;">Select 90-Min ($160)</button>
+      </div>
+
+      <!-- 5PACK -->
+      <div class="price-card">
+        <div>
+          <div class="package-name">5-Session Family Pass</div>
+          <div class="package-desc">Prepaid wellness pass shareable with household family members.</div>
+          <div class="package-price">$475 <span>/ 5 sessions</span></div>
+          <ul class="feature-list">
+            <li><span class="check-green">✓</span> Save $100 off single rates ($95 per session)</li>
+            <li><span class="check-green">✓</span> Shareable across your household</li>
+            <li><span class="check-green">✓</span> <strong>Complimentary hot stones included</strong></li>
+            <li><span class="check-green">✓</span> Priority weekend &amp; evening booking slots</li>
+          </ul>
+        </div>
+        <button onclick="setPackage('5PACK', 475)" class="btn-sub-cta" style="width: 100%; text-align: center;">Select 5-Pack ($475)</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Live Dispatch & Booking Form -->
+  <section id="booking-section" class="dispatch-wrap">
+    <div class="dispatch-box">
+      
+      <!-- Form Side -->
+      <div>
+        <h3 class="form-group-title">Reserve Your In-Home Sanctuary</h3>
+        <p class="form-group-sub">Select your arrival window, location, and preferred healing focus.</p>
+
+        <div class="booking-cta" style="text-align:center; padding: 1.2rem 0 0.4rem;">
+          <p style="font-weight:600; color:#0f172a; margin-bottom:.4rem;">Reserve by phone or text &mdash; we'll complete your intake together on a brief, private call.</p>
+          <p style="font-size:.92rem; color:#64748b; margin-bottom:1.4rem;">Dedicated In-Home Dispatch &middot; 7 days a week &middot; 2-hour arrival windows</p>
+          <a href="tel:4024992936" class="btn-main-cta" style="width:100%; justify-content:center; display:flex; margin-bottom:.75rem;">Call or Text to Book &mdash; 402-499-2936</a>
+          <a href="sms:4024992936" class="btn-secondary" style="display:inline-flex; justify-content:center; text-decoration:none;">Prefer to text? Send a message</a>
+          <p style="font-size:.82rem; color:#94a3b8; margin-top:1.4rem;">Your health details are never collected on this page &mdash; they stay private, between us.</p>
+        </div>
+      </div>
+
+      <!-- Summary Side -->
+      <div class="summary-card">
+        <div>
+          <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #0f172a; margin-bottom: 1.4rem;">Reservation Details</h4>
+          
+          <div class="summary-item">
+            <span>Selected Tier:</span>
+            <strong id="sumTierName">90-Min Deep Recovery</strong>
+          </div>
+          <div class="summary-item">
+            <span>Base Package:</span>
+            <strong id="sumBasePrice">$160.00</strong>
+          </div>
+          <div class="summary-item">
+            <span>Travel &amp; Mileage:</span>
+            <strong id="sumTravelFee">$0.00 (Pueblo)</strong>
+          </div>
+          <div class="summary-item">
+            <span>Hot Stones:</span>
+            <strong style="color: var(--healing-sage);">Complimentary ($0.00)</strong>
+          </div>
+          <div class="summary-item">
+            <span>Healing Focus:</span>
+            <strong id="sumFocusName" style="color: var(--honey-gold);">Back Pain &amp; Sciatica</strong>
+          </div>
+          <div class="summary-item">
+            <span>Clean Linens &amp; Oils:</span>
+            <strong style="color: var(--healing-sage);">Included</strong>
+          </div>
+        </div>
+
+        <div class="summary-total">
+          <span class="summary-total-label">Total Amount:</span>
+          <span class="summary-total-amount" id="sumGrandTotal">$160.00</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Verified Client Reviews -->
+  <section class="reviews-wrap">
+    <div class="section-header">
+      <span class="kicker-sub">Peace of Mind &amp; Proven Comfort</span>
+      <h2>Real Stories of Healing &amp; Relief</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-box">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">
+          "Suffered from debilitating migraine headaches for months. Having a therapist come to my quiet home with warm basalt stones and gentle neck release relieved pain that three medications couldn't touch."
+        </p>
+        <div class="review-author">Sarah L.</div>
+        <div class="review-context">Pueblo West · Headache &amp; Neck Specialty</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">
+          "My 78-year-old mother has severe arthritis in her hips. The therapist was so gentle, respectful, and compassionate. Her mobility has improved dramatically, and she loves not having to leave her home."
+        </p>
+        <div class="review-author">David K. for Mary K.</div>
+        <div class="review-context">Colorado Springs · Senior Citizen Restorative</div>
+      </div>
+
+      <div class="review-box">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">
+          "As an active runner with chronic lower back pain, having the clinic arrive at my living room is an incredible blessing. Deep tissue work was firm, respectful, and deeply healing."
+        </p>
+        <div class="review-author">Marcus V.</div>
+        <div class="review-context">Pueblo, CO · Back Pain &amp; Deep Tissue</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="regulatory-badge">
+      ⚖️ Colorado DORA Licensed Massage Therapist · ABMP Insured · 🌸 Proudly 100% Woman Owned and Operated
+    </div>
+    <p>© 2026 Bee the light massage therapy. All rights reserved.<br>
+    Dedicated In-Home Dispatch: <a href="tel:4024992936">402-499-2936</a> · Pueblo, Cañon City &amp; Colorado Springs</p>
+    <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.6rem; opacity: 0.85;">All client health disclosures are protected under Colorado DORA confidentiality and HIPAA Title II standards.</p>
+  </footer>
+
+  <script>
+    // Auto-set date to tomorrow
+    const d = new Date();
+    d.setDate(d.getDate() + 1);
+    const dateInput = document.getElementById('prefDate');
+    if (dateInput) dateInput.value = d.toISOString().split('T')[0];
+
+    const packageRates = { '60MIN': 115, '90MIN': 160, '5PACK': 475 };
+    const travelRates = { 'Pueblo': 0, 'Pueblo West': 0, 'Canon City': 20, 'Fountain': 15, 'Colorado Springs': 25 };
+
+    function setPackage(pkg, price) {
+      const sel = document.getElementById('pkgSelect');
+      if (sel) {
+        sel.value = pkg;
+        calculateTotal();
+        document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function selectSpecialty(spec) {
+      const sel = document.getElementById('focusSelect');
+      if (sel) {
+        sel.value = spec;
+        updateSummaryFocus();
+        document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function setTime(el, timeSlot) {
+      document.querySelectorAll('.time-slot-btn').forEach(btn => btn.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('timeSelect').value = timeSlot;
+    }
+
+    function updateSummaryFocus() {
+      const sel = document.getElementById('focusSelect');
+      document.getElementById('sumFocusName').innerText = sel.options[sel.selectedIndex].text;
+    }
+
+    function calculateTotal() {
+      const pkg = document.getElementById('pkgSelect').value;
+      const city = document.getElementById('geoSelect').value;
+
+      const base = packageRates[pkg] || 160;
+      const travel = travelRates[city] || 0;
+      const total = base + travel;
+
+      document.getElementById('sumTierName').innerText = pkg === '60MIN' ? '60-Min Restorative' : (pkg === '90MIN' ? '90-Min Deep Recovery' : '5-Session Family Pass');
+      document.getElementById('sumBasePrice').innerText = `$${base.toFixed(2)}`;
+      document.getElementById('sumTravelFee').innerText = travel === 0 ? `$0.00 (${city})` : `+$${travel}.00 (${city})`;
+      document.getElementById('sumGrandTotal').innerText = `$${total.toFixed(2)}`;
+    }
+
+    // Auto-set consent date
+    const consentDate = document.getElementById('consentDateInput');
+    if (consentDate) consentDate.value = new Date().toISOString().split('T')[0];
+
+    function setPressure(btn, val) {
+      document.querySelectorAll('.pressure-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('pressureInput').value = val;
+      document.getElementById('pressureLabel').innerText = val;
+    }
+
+    function updateMedConditions() {
+      const checked = Array.from(document.querySelectorAll('input[name="med_cond"]:checked')).map(cb => cb.value);
+      const notes = document.querySelector('input[name="medical_conditions_notes"]')?.value.trim();
+      let res = checked.join(', ');
+      if (notes) res = res ? `${res}; Notes: ${notes}` : notes;
+      document.getElementById('medicalConditionsHidden').value = res || 'None specified';
+    }
+
+    calculateTotal();
+    updateSummaryFocus();
+  </script>
+</body>
+</html>
