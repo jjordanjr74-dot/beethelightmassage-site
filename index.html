@@ -44,7 +44,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background-color: var(--bg-warm-light);
       color: var(--text-main);
       overflow-x: hidden;
@@ -110,7 +110,7 @@
       box-shadow: 0 4px 12px var(--honey-glow);
     }
     .brand-name {
-      font-family: 'Playfair Display', serif;
+      font-family: inherit;
       font-size: 1.55rem;
       font-weight: 800;
       color: var(--text-main);
@@ -196,7 +196,7 @@
       margin-bottom: 1.4rem;
     }
     .hero-title {
-      font-family: 'Playfair Display', serif;
+      font-family: inherit;
       font-size: clamp(2.3rem, 4vw, 3rem);
       font-weight: 800;
       line-height: 1.18;
@@ -451,7 +451,7 @@
       display: block;
     }
     .section-header h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: inherit;
       font-size: 2.5rem;
       font-weight: 800;
       color: #0f172a;
@@ -701,7 +701,7 @@
       .dispatch-box { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
     }
     .form-group-title {
-      font-family: 'Playfair Display', serif;
+      font-family: inherit;
       font-size: 1.8rem;
       color: #0f172a;
       margin-bottom: 0.5rem;
@@ -939,6 +939,36 @@
       font-weight: 600;
     }
     @media (max-width: 900px) { .dispatch-box { grid-template-columns: minmax(0, 1fr); } .dispatch-box > * { min-width: 0; max-width: 100%; } .booking-cta, .summary-card { min-width: 0; max-width: 100%; overflow-wrap: anywhere; } }
+  
+    /* Use one system stack so headings and body copy render consistently without remote fonts. */
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .brand-name, .hero-title, .section-header h2, .form-group-title, .booking-note,
+    .summary-card h4 { font-family: inherit; }
+    /* Keep each card inside narrow mobile tracks; min-width:auto otherwise preserves the 340px desktop minimum. */
+    .specialty-card, .price-card, .review-box { min-width: 0; width: 100%; }
+    .specialty-btn, .btn-secondary { min-height: 44px; }
+    .summary-total { display: grid; grid-template-columns: minmax(0, 1fr); gap: .5rem; align-items: start; }
+    .summary-total-label, .summary-total-amount { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+    .summary-total-amount { font-size: 1.05rem; line-height: 1.4; }
+    .booking-inquiry { grid-template-columns: minmax(0, 1fr) minmax(220px, .65fr); align-items: center; }
+    .booking-step { margin: 1.25rem 0; color: #334155; line-height: 1.65; }
+    .booking-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .booking-actions a { min-height: 48px; justify-content: center; align-items: center; }
+    .booking-privacy, .booking-note span { color: #475569; font-size: .9rem; margin-top: .8rem; }
+    .booking-note { display: grid; gap: .5rem; background: #fffbf0; border: 1px solid var(--border-gold); border-radius: 12px; padding: 1.4rem; }
+    .hot-stones-icon svg { display: block; width: 25px; height: 25px; }
+    @media (max-width: 900px) {
+      .booking-inquiry { grid-template-columns: minmax(0, 1fr); }
+      .dispatch-box > * { min-width: 0; max-width: 100%; }
+    }
+    @media (max-width: 600px) {
+      .specialties-grid, .pricing-grid, .reviews-grid { grid-template-columns: minmax(0, 1fr); }
+      .specialties-grid > *, .pricing-grid > *, .reviews-grid > * { min-width: 0; width: 100%; }
+      .booking-inquiry { padding: 1.1rem; }
+      .booking-actions { flex-direction: column; }
+      .booking-actions a { width: 100%; }
+    }
+    
   </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "Bee the Light Massage Therapy", "description": "Colorado-licensed, ABMP-insured therapeutic massage delivered to your home across Southern Colorado.", "url": "https://beethelightmassage.com/", "image": "https://beethelightmassage.com/static/images/home-sanctuary.webp", "telephone": "+14024992936", "priceRange": "$$", "areaServed": [{"@type": "City", "name": "Pueblo"}, {"@type": "City", "name": "Pueblo West"}, {"@type": "City", "name": "Colorado Springs"}, {"@type": "City", "name": "Fountain"}, {"@type": "City", "name": "Ca\u00f1on City"}], "availableChannel": {"@type": "ServiceChannel", "servicePhone": {"@type": "ContactPoint", "telephone": "+14024992936", "contactType": "reservations"}, "availableLanguage": "English"}, "knowsAbout": ["Headaches", "Back Pain", "Arthritis", "Deep Tissue Massage", "Senior Citizen Massage", "Pediatric Massage", "Hot Stone Therapy"], "slogan": "A Place of Tranquility & Healing, Delivered to Your Door", "makesOffer": [{"@type": "Offer", "name": "60-Minute Therapeutic Massage"}, {"@type": "Offer", "name": "90-Minute Therapeutic Massage"}, {"@type": "Offer", "name": "Five-Session Package"}, {"@type": "Offer", "name": "Corporate Wellness"}, {"@type": "Offer", "name": "Corporate Executive"}]}</script>
 <!-- Cloudflare Web Analytics --><script defer type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b67c7b78a6b14b878db6324bbc537a95"}'></script><!-- End Cloudflare Web Analytics -->
@@ -961,7 +991,7 @@
         <div class="geo-tag">
           📍 Pueblo, Cañon City &amp; Springs Fleet
         </div>
-        <a href="#booking-section" class="btn-reserve-nav">Book In-Home Sanctuary</a>
+        <a href="#booking-section" class="btn-reserve-nav">Check availability</a>
       </div>
     </div>
   </header>
@@ -974,14 +1004,14 @@
           ✨ Colorado-licensed · ABMP-insured · Woman-owned
         </div>
         <h1 class="hero-title">
-          In-home massage,<br><span>delivered to your door.</span>
+          In-home massage, <span>delivered to your door.</span>
         </h1>
         <p class="hero-desc">
           Enjoy focused therapeutic care at home, with a professional massage table and fresh linens brought to you—so you can relax without a drive back after your session.
         </p>
         <div class="hero-action-group">
           <a href="#booking-section" class="btn-main-cta">
-            Reserve Your Session
+            Check availability
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
           <a href="#specialties-section" class="btn-sub-cta">Explore Clinical Specialties</a>
@@ -1008,7 +1038,7 @@
       </div>
     </div>
     <div class="value-card">
-      <div class="value-icon-box">🪨</div>
+      <div class="value-icon-box hot-stones-icon"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><ellipse cx="16" cy="23" rx="11" ry="5" fill="#b77b45"/><ellipse cx="11" cy="15" rx="8" ry="4.5" fill="#d9a56c"/><ellipse cx="21" cy="13" rx="7" ry="4" fill="#c58a52"/><path d="M11 8c-2-2 1-3 0-5m6 5c-2-2 1-3 0-5m6 5c-2-2 1-3 0-5" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linecap="round"/></svg><span class="visually-hidden">Hot stones</span></div>
       <div class="value-text">
         <h4>Complimentary Hot Stones</h4>
         <p>Available on any session upon request at zero charge.</p>
@@ -1280,7 +1310,7 @@
             <li><span class="check-green">✓</span> Confirm travel fee before payment</li>
           </ul>
         </div>
-        <a href="#booking-section" class="btn-sub-cta" style="display:flex;justify-content:center;align-items:center;width:100%;text-decoration:none;text-align:center;">Check availability &mdash; Select 60-Min ($115)</a>
+        <a href="sms:4024992936?body=I%20would%20like%20to%20ask%20about%20the%2060-Min%20massage%20package%20%28%24115%29.%20Please%20confirm%20appointment%20availability%2C%20address%20coverage%2C%20any%20travel%20fee%2C%20the%20final%20total%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-sub-cta" style="display:flex;justify-content:center;align-items:center;width:100%;text-decoration:none;text-align:center;" aria-label="Check availability — Text about 60-Min ($115); opens a draft text only">Check availability — Text about 60-Min ($115)</a>
       </div>
 
       <!-- 90MIN -->
@@ -1298,7 +1328,7 @@
             <li><span class="check-green">✓</span> Unhurried post-session rest in your home</li>
           </ul>
         </div>
-        <a href="#booking-section" class="btn-main-cta" style="display:flex;justify-content:center;align-items:center;width:100%;text-decoration:none;text-align:center;">Check availability &mdash; Select 90-Min ($160)</a>
+        <a href="sms:4024992936?body=I%20would%20like%20to%20ask%20about%20the%2090-Min%20massage%20package%20%28%24160%29.%20Please%20confirm%20appointment%20availability%2C%20address%20coverage%2C%20any%20travel%20fee%2C%20the%20final%20total%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-main-cta" style="display:flex;justify-content:center;align-items:center;width:100%;text-decoration:none;text-align:center;" aria-label="Check availability — Text about 90-Min ($160); opens a draft text only">Check availability — Text about 90-Min ($160)</a>
       </div>
 
       <!-- 5PACK -->
@@ -1314,67 +1344,26 @@
             <li><span class="check-green">✓</span> Contact the practice to confirm current pass terms</li>
           </ul>
         </div>
-        <a href="#booking-section" class="btn-sub-cta" style="display:flex;justify-content:center;align-items:center;width:100%;text-decoration:none;text-align:center;">Check availability &mdash; Select 5-Pack ($475)</a>
+        <a href="sms:4024992936?body=I%20would%20like%20to%20ask%20about%20the%205-Pack%20massage%20package%20%28%24475%29.%20Please%20confirm%20appointment%20availability%2C%20address%20coverage%2C%20any%20travel%20fee%2C%20the%20final%20total%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-sub-cta" style="display:flex;justify-content:center;align-items:center;width:100%;text-decoration:none;text-align:center;" aria-label="Check availability — Text about 5-Pack ($475); opens a draft text only">Check availability — Text about 5-Pack ($475)</a>
       </div>
 
     </div>
   </section>
 
-  <!-- Live Dispatch & Booking Form -->
-  <section id="booking-section" class="dispatch-wrap">
-    <div class="dispatch-box">
-      
-      <!-- Form Side -->
-      <div>
-        <h3 class="form-group-title">Reserve Your In-Home Sanctuary</h3>
-        <p class="form-group-sub">Select your arrival window, location, and preferred healing focus.</p>
-
-        <div class="booking-cta" style="text-align:center; padding: 1.2rem 0 0.4rem;">
-          <p style="font-weight:600; color:#0f172a; margin-bottom:.4rem;">Start by calling or texting to check availability and service-area coverage.</p>
-          <p style="font-size:.92rem; color:#64748b; margin-bottom:1.4rem;">Confirm your exact address, arrival window, package, travel fee, total, and written payment/cancellation terms before paying.</p>
-          <a href="tel:4024992936" class="btn-main-cta" style="width:100%; justify-content:center; display:flex; margin-bottom:.75rem;">Call to Check Availability &mdash; 402-499-2936</a>
-          <a href="sms:4024992936" class="btn-secondary" style="display:inline-flex; justify-content:center; text-decoration:none;">Text to Check Availability</a>
-          <p style="font-size:.82rem; color:#64748b; margin-top:1.4rem;">Please do not send medical or other sensitive health details by website form or text. Ask how to complete any needed intake privately.</p>
+  <!-- Public booking is inquiry-only; the click never books or charges. -->
+  <section id="booking-section" class="dispatch-wrap" aria-labelledby="booking-title">
+    <div class="dispatch-box booking-inquiry">
+      <div class="booking-copy">
+        <h2 id="booking-title" class="form-group-title">Check Availability</h2>
+        <p class="form-group-sub">Check availability by call or text. Payment after confirmation; this page does not book an appointment or take payment.</p>
+        <p class="booking-step"><strong>Before paying, confirm:</strong> your exact address and coverage, arrival window, package, any travel fee, final total, and written payment and cancellation terms.</p>
+        <div class="booking-actions">
+          <a href="tel:4024992936" class="btn-main-cta">Call 402-499-2936</a>
+          <a href="sms:4024992936?body=I%20would%20like%20to%20check%20massage%20appointment%20availability.%20Please%20confirm%20my%20address%20coverage%2C%20arrival%20window%2C%20package%20and%20price%2C%20any%20travel%20fee%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-secondary">Text to Check availability</a>
         </div>
+        <p class="booking-privacy">The text button opens a draft only; it will not send until you choose Send. Do not include health details.</p>
       </div>
-
-      <!-- Summary Side -->
-      <div class="summary-card">
-        <div>
-          <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #0f172a; margin-bottom: 1.4rem;">Reservation Details</h4>
-          
-          <div class="summary-item">
-            <span>Selected Tier:</span>
-            <strong id="sumTierName">90-Min Deep Recovery</strong>
-          </div>
-          <div class="summary-item">
-            <span>Base Package:</span>
-            <strong id="sumBasePrice">$160.00</strong>
-          </div>
-          <div class="summary-item">
-            <span>Travel &amp; Mileage:</span>
-            <strong id="sumTravelFee">$0.00 (Pueblo)</strong>
-          </div>
-          <div class="summary-item">
-            <span>Hot Stones:</span>
-            <strong style="color: var(--healing-sage);">Complimentary ($0.00)</strong>
-          </div>
-          <div class="summary-item">
-            <span>Healing Focus:</span>
-            <strong id="sumFocusName" style="color: var(--honey-gold);">Back &amp; Hip Focus</strong>
-          </div>
-          <div class="summary-item">
-            <span>Clean Linens &amp; Oils:</span>
-            <strong style="color: var(--healing-sage);">Included</strong>
-          </div>
-        </div>
-
-        <div class="summary-total">
-          <span class="summary-total-label">Payment after confirmation — confirm final total:</span>
-          <span class="summary-total-amount">Confirm with the practice before paying</span>
-        </div>
-      </div>
-
+      <aside class="booking-note"><strong>No appointment is reserved</strong><span>A time is confirmed only by the practice after you agree on the details. No online charge is initiated by this page.</span></aside>
     </div>
   </section>
 
