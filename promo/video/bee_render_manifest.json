@@ -1,0 +1,223 @@
+{
+ "slug": "bee",
+ "voice": "en-US-JennyNeural",
+ "tts_python": "D:\\HermesPortable\\hermes_home\\installs\\7a3b3f3f6efeb7b0\\environments\\1265287d30ae4eebb931538094a3bf03\\venv\\Scripts\\python.exe",
+ "total_s": 33.3333,
+ "items": [
+  {
+   "index": 0,
+   "kind": "scene",
+   "hint": 4.0,
+   "vo_len": 4.104,
+   "window": 4.8333,
+   "extended": true,
+   "start": 0.0,
+   "end": 4.8333,
+   "clip_len": 5.3333
+  },
+  {
+   "index": 1,
+   "kind": "scene",
+   "hint": 4.0,
+   "vo_len": 4.656,
+   "window": 5.3667,
+   "extended": true,
+   "start": 4.8333,
+   "end": 10.2,
+   "clip_len": 5.8667
+  },
+  {
+   "index": 2,
+   "kind": "scene",
+   "hint": 4.0,
+   "vo_len": 3.984,
+   "window": 4.7,
+   "extended": true,
+   "start": 10.2,
+   "end": 14.9,
+   "clip_len": 5.2
+  },
+  {
+   "index": 3,
+   "kind": "scene",
+   "hint": 4.5,
+   "vo_len": 6.096,
+   "window": 6.8,
+   "extended": true,
+   "start": 14.9,
+   "end": 21.7,
+   "clip_len": 7.3
+  },
+  {
+   "index": 4,
+   "kind": "scene",
+   "hint": 4.0,
+   "vo_len": 4.632,
+   "window": 5.3333,
+   "extended": true,
+   "start": 21.7,
+   "end": 27.0333,
+   "clip_len": 5.8333
+  },
+  {
+   "index": 5,
+   "kind": "cta",
+   "hint": 3.0,
+   "vo_len": 5.592,
+   "window": 6.3,
+   "extended": true,
+   "start": 27.0333,
+   "end": 33.3333,
+   "clip_len": 6.3
+  }
+ ],
+ "vo_texts": [
+  "Bee the Light Massage brings the massage table to your living room.",
+  "Your therapist arrives with the table and fresh linens, and sets up.",
+  "Warm basalt hot stones are complimentary on request.",
+  "Sixty minutes is one hundred fifteen dollars. Ninety minutes is one sixty.",
+  "Colorado-licensed, ABMP-insured, and proudly woman-owned.",
+  "Book at beethelightmassage.com. Call or text to find your time."
+ ],
+ "outputs": {
+  "9x16": {
+   "mp4": "bee_9x16.mp4",
+   "poster": "bee_9x16.jpg",
+   "bytes": 11938685,
+   "poster_bytes": 69063,
+   "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+     {
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1080,
+      "height": 1920,
+      "pix_fmt": "yuvj420p",
+      "r_frame_rate": "30/1"
+     },
+     {
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "r_frame_rate": "0/0"
+     }
+    ],
+    "format": {
+     "duration": "33.333333",
+     "size": "11938685"
+    }
+   },
+   "midpoint_luma": [
+    {
+     "index": 0,
+     "t": 2.417,
+     "mean_luma": 156.45,
+     "std_luma": 71.91
+    },
+    {
+     "index": 1,
+     "t": 7.517,
+     "mean_luma": 149.35,
+     "std_luma": 84.33
+    },
+    {
+     "index": 2,
+     "t": 12.55,
+     "mean_luma": 110.77,
+     "std_luma": 45.91
+    },
+    {
+     "index": 3,
+     "t": 18.3,
+     "mean_luma": 110.05,
+     "std_luma": 41.97
+    },
+    {
+     "index": 4,
+     "t": 24.367,
+     "mean_luma": 130.19,
+     "std_luma": 48.68
+    },
+    {
+     "index": 5,
+     "t": 30.183,
+     "mean_luma": 72.17,
+     "std_luma": 29.68
+    }
+   ],
+   "duration_delta_s": 0.0
+  },
+  "16x9": {
+   "mp4": "bee_16x9.mp4",
+   "poster": "bee_16x9.jpg",
+   "bytes": 13032409,
+   "poster_bytes": 65119,
+   "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+     {
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "pix_fmt": "yuvj420p",
+      "r_frame_rate": "30/1"
+     },
+     {
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "r_frame_rate": "0/0"
+     }
+    ],
+    "format": {
+     "duration": "33.333333",
+     "size": "13032409"
+    }
+   },
+   "midpoint_luma": [
+    {
+     "index": 0,
+     "t": 2.417,
+     "mean_luma": 142.82,
+     "std_luma": 70.28
+    },
+    {
+     "index": 1,
+     "t": 7.517,
+     "mean_luma": 136.72,
+     "std_luma": 78.0
+    },
+    {
+     "index": 2,
+     "t": 12.55,
+     "mean_luma": 100.52,
+     "std_luma": 52.64
+    },
+    {
+     "index": 3,
+     "t": 18.3,
+     "mean_luma": 110.3,
+     "std_luma": 50.71
+    },
+    {
+     "index": 4,
+     "t": 24.367,
+     "mean_luma": 125.78,
+     "std_luma": 57.7
+    },
+    {
+     "index": 5,
+     "t": 30.183,
+     "mean_luma": 69.74,
+     "std_luma": 26.41
+    }
+   ],
+   "duration_delta_s": 0.0
+  }
+ },
+ "music": null
+}

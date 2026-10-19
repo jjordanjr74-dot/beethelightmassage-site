@@ -1,0 +1,61 @@
+{
+ "venture": "Bee the Light Massage",
+ "slug": "bee",
+ "voice": "en-US-JennyNeural",
+ "brand": {
+  "palette": [
+   "#B45309",
+   "#2A1A0C",
+   "#FBBF24"
+  ],
+  "font_hint": "segoe"
+ },
+ "scenes": [
+  {
+   "image": "D:/Hermes_Core/workspace/beethelight_site/static/images/home-sanctuary.jpg",
+   "headline": "Massage in your own home",
+   "sub": "Pueblo, Pueblo West and Colorado Springs",
+   "vo": "Bee the Light Massage brings the massage table to your living room.",
+   "dur": 4.0,
+   "credit": ""
+  },
+  {
+   "image": "D:/Hermes_Core/workspace/beethelight_site/static/images/treatment-details.jpg",
+   "headline": "Table and fresh linens included",
+   "sub": "Your therapist sets up where you are comfortable",
+   "vo": "Your therapist arrives with the table and fresh linens, and sets up.",
+   "dur": 4.0,
+   "credit": ""
+  },
+  {
+   "image": "D:/Hermes_Core/workspace/beethelight_site/static/images/hot_stones.jpg",
+   "headline": "Hot stones on request",
+   "sub": "Complimentary warm basalt stones with your session",
+   "vo": "Warm basalt hot stones are complimentary on request.",
+   "dur": 4.0,
+   "credit": ""
+  },
+  {
+   "image": "D:/Hermes_Core/workspace/beethelight_site/static/images/organic_botanicals.jpg",
+   "headline": "Ease tension, unhurried",
+   "sub": "60 min $115 · 90 min $160",
+   "vo": "Sixty minutes is one hundred fifteen dollars. Ninety minutes is one sixty.",
+   "dur": 4.5,
+   "credit": ""
+  },
+  {
+   "image": "D:/Hermes_Core/workspace/beethelight_site/static/images/hero_sanctuary.jpg",
+   "headline": "Licensed, insured, woman-owned",
+   "sub": "Colorado Springs 60 min $140, travel included",
+   "vo": "Colorado-licensed, ABMP-insured, and proudly woman-owned.",
+   "dur": 4.0,
+   "credit": ""
+  }
+ ],
+ "cta": {
+  "line": "Book your session",
+  "url": "beethelightmassage.com",
+  "dur": 3.0,
+  "vo": "Book at beethelightmassage.com. Call or text to find your time."
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "venture": "Bee the Light Massage",
+ "package": "promo",
+ "root": "D:/Hermes_Core/workspace/beethelight_site/promo",
+ "built": "2026-10-17",
+ "deployed": false,
+ "pending": {
+  "video/bee_16x9.mp4": "not rendered; landing <video src> reserved; render via LAUNCH_KIT section 2"
+ },
+ "verified_against": {
+  "$115/$140/$160/$475/$40/$125 amounts": "D:/Hermes_Core/Teams/Marketing/ops/offer_truth.json advertised_prices_usd",
+  "6 cs_live checkout URLs": "D:/Hermes_Core/Teams/Marketing/LIVE_LINKS.md (Bee section) + Teams/Bee_Light_Massage/Workspace/PAYMENT_LINKS.md; GET 200 2026-10-17",
+  "Phone 402-499-2936": "D:/Hermes_Core/workspace/beethelight_site/index.html tel:4024992936",
+  "Service areas Pueblo/Pueblo West/Canon City/Fountain/Colorado Springs": "D:/Hermes_Core/workspace/beethelight_site/index.html service-area links + areas/ dirs",
+  "Colorado DORA licensed, ABMP insured, woman-owned": "D:/Hermes_Core/workspace/beethelight_site/index.html footer + hero badges",
+  "Hot stones complimentary on request; 5-pass hot stones included": "D:/Hermes_Core/workspace/beethelight_site/index.html package cards",
+  "Two-hour arrival window": "D:/Hermes_Core/workspace/beethelight_site/index.html 'Two-Hour Arrival Windows'",
+  "Table, fresh linens": "D:/Hermes_Core/Teams/Bee_Light_Massage/Workspace/POSTING_KIT.md line 39",
+  "Warm basalt hot stones": "D:/Hermes_Core/Teams/Bee_Light_Massage/Workspace/POSTING_KIT.md line 31",
+  "Confirm-before-paying policy": "D:/Hermes_Core/workspace/beethelight_site/index.html booking-step + booking-policy.html",
+  "Lora font OFL-1.1": "promo/fonts/OFL.txt (github.com/google/fonts/ofl/lora)",
+  "Photos": "D:/Hermes_Core/workspace/beethelight_site/static/images (site's own library)"
+ },
+ "files": [
+  {
+   "name": "_manifest.json",
+   "bytes": 2654
+  },
+  {
+   "name": "assets/hero.jpg",
+   "bytes": 122134
+  },
+  {
+   "name": "assets/og.png",
+   "bytes": 574500
+  },
+  {
+   "name": "assets/social_1080.png",
+   "bytes": 808767
+  },
+  {
+   "name": "fonts/Lora-Variable.ttf",
+   "bytes": 212196
+  },
+  {
+   "name": "fonts/OFL.txt",
+   "bytes": 4423
+  },
+  {
+   "name": "index.html",
+   "bytes": 14384
+  },
+  {
+   "name": "LAUNCH_KIT.md",
+   "bytes": 5469
+  },
+  {
+   "name": "video/bee_16x9.jpg",
+   "bytes": 119716
+  },
+  {
+   "name": "video/BRIEF.md",
+   "bytes": 3862
+  },
+  {
+   "name": "video/storyboard.json",
+   "bytes": 1910
+  }
+ ],
+ "total_files": 11,
+ "total_bytes": 1870015
+}

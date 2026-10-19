@@ -2,7 +2,10 @@
   "schema_version": "webmcp-1.0",
   "site": "https://beethelightmassage.com",
   "name": "Bee the light massage therapy",
-  "bilingual_languages": ["en", "es"],
+  "bilingual_languages": [
+    "en",
+    "es"
+  ],
   "description": "Licensed in-home mobile therapeutic massage in Pueblo, Pueblo West, Canon City, Fountain, and Colorado Springs, Colorado. Bilingual English/Espanol support.",
   "contact_phone": "402-499-2936",
   "packages": [
@@ -34,17 +37,36 @@
     }
   ],
   "travel_zones": [
-    {"city": "Pueblo", "travel_fee_usd": 0},
-    {"city": "Pueblo West", "travel_fee_usd": 0},
-    {"city": "Canon City", "travel_fee_usd": 20},
-    {"city": "Fountain", "travel_fee_usd": 20},
-    {"city": "Colorado Springs", "travel_fee_usd": 25}
+    {
+      "city": "Pueblo",
+      "travel_fee_usd": 0
+    },
+    {
+      "city": "Pueblo West",
+      "travel_fee_usd": 0
+    },
+    {
+      "city": "Canon City",
+      "travel_fee_usd": 20
+    },
+    {
+      "city": "Fountain",
+      "travel_fee_usd": 20
+    },
+    {
+      "city": "Colorado Springs",
+      "travel_fee_usd": 25
+    }
   ],
   "tools": [
     {
       "name": "list_packages",
       "description": "Return published in-home massage packages, prices, and complimentary inclusions (read-only).",
-      "input_schema": {"type": "object", "properties": {}, "additionalProperties": false}
+      "input_schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
     },
     {
       "name": "quote_session",
@@ -52,17 +74,72 @@
       "input_schema": {
         "type": "object",
         "properties": {
-          "package": {"type": "string", "enum": ["60MIN", "90MIN", "5PACK"]},
-          "city": {"type": "string", "enum": ["Pueblo", "Pueblo West", "Canon City", "Fountain", "Colorado Springs"]}
+          "package": {
+            "type": "string",
+            "enum": [
+              "60MIN",
+              "90MIN",
+              "5PACK"
+            ]
+          },
+          "city": {
+            "type": "string",
+            "enum": [
+              "Pueblo",
+              "Pueblo West",
+              "Canon City",
+              "Fountain",
+              "Colorado Springs"
+            ]
+          }
         },
-        "required": ["package", "city"],
+        "required": [
+          "package",
+          "city"
+        ],
         "additionalProperties": false
       }
     },
     {
       "name": "compare_competitor_rates",
       "description": "Compare Bee the Light published rates and hands-on minutes against franchise spa chains and mobile apps.",
-      "input_schema": {"type": "object", "properties": {}, "additionalProperties": false}
+      "input_schema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    }
+  ],
+  "specialties": [
+    {
+      "id": "HEADACHES",
+      "name_en": "Treatment of Headaches (Tension, Cervicogenic & Suboccipital/TMJ Release)",
+      "name_es": "Tratamiento de Dolores de Cabeza (Liberación Suboccipital, Cervical y ATM)",
+      "evidence_citations": [
+        "Quinn et al., American Journal of Public Health",
+        "Moraska et al., Clinical Journal of Pain",
+        "Chaibi & Russell, Journal of Manual & Manipulative Therapy"
+      ]
+    },
+    {
+      "id": "BACK_PAIN",
+      "name_en": "Back & Hip Focus",
+      "name_es": "Enfoque en Espalda y Cadera"
+    },
+    {
+      "id": "ARTHRITIS",
+      "name_en": "Gentle Joint & Mobility Focus",
+      "name_es": "Enfoque Suave en Articulaciones y Movilidad"
+    },
+    {
+      "id": "DEEP_TISSUE",
+      "name_en": "Deep Tissue & Myofascial Release",
+      "name_es": "Tejido Profundo y Liberación Miofascial"
+    },
+    {
+      "id": "SENIOR",
+      "name_en": "Senior Citizen Restorative",
+      "name_es": "Masaje Restaurador para Adultos Mayores"
     }
   ]
 }
