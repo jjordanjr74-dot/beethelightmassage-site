@@ -10,6 +10,9 @@
   <link rel="apple-touch-icon" href="static/images/bee_logo_square.png">
   <meta name="theme-color" content="#d97706">
   <link rel="canonical" href="https://beethelightmassage.com/">
+  <link rel="alternate" hreflang="en" href="https://beethelightmassage.com/">
+  <link rel="alternate" hreflang="es" href="https://beethelightmassage.com/?lang=es">
+  <link rel="modelcontext" href="/api/tools.json">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bee the Light Massage Therapy">
   <meta property="og:title" content="Bee the Light Massage Therapy — In-Home Therapeutic Bodywork in Pueblo &amp; Colorado Springs">
@@ -1400,6 +1403,19 @@
           </tr>
         </tbody>
       </table>
+      <aside id="btl-roi-calc" style="margin-top: 1.5rem; padding: 1.25rem; background: #fffbf0; border: 1px solid var(--border-gold); border-radius: 14px;">
+        <p style="margin: 0 0 0.65rem; font-weight: 800; color: var(--text-main); font-size: 1.05rem;" data-i18n="calc_title">Interactive Value Calculator: See What You Gain Each Year</p>
+        <p style="margin: 0 0 0.85rem; font-size: 0.92rem; color: var(--text-muted);">
+          <label for="btlFreq" style="font-weight: 700; margin-right: 8px;" data-i18n="calc_label">Sessions per year:</label>
+          <select id="btlFreq" onchange="updateBtlCalc()" style="padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border-gold); font-weight: 700; margin-right: 16px;">
+            <option value="5">5 Sessions (1 Family Pass)</option>
+            <option value="10" selected>10 Sessions (~Monthly Care)</option>
+            <option value="15">15 Sessions</option>
+            <option value="24">24 Sessions (Bi-Weekly Recovery)</option>
+          </select>
+          <span id="btlCalcOut" style="font-weight: 700; color: #065f46;">With 10 sessions/yr on our 5-Pack ($95/session): You save $200 off single rates + $350 in free hot stones + gain 100 extra hands-on minutes vs. 50-min spa chains ($550+ total value, $0 contract).</span>
+        </p>
+      </aside>
     </div>
   </section>
 

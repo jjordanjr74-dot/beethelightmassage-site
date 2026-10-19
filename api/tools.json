@@ -1,0 +1,68 @@
+{
+  "schema_version": "webmcp-1.0",
+  "site": "https://beethelightmassage.com",
+  "name": "Bee the light massage therapy",
+  "bilingual_languages": ["en", "es"],
+  "description": "Licensed in-home mobile therapeutic massage in Pueblo, Pueblo West, Canon City, Fountain, and Colorado Springs, Colorado. Bilingual English/Espanol support.",
+  "contact_phone": "402-499-2936",
+  "packages": [
+    {
+      "id": "60MIN",
+      "name_en": "60-Min Restorative",
+      "name_es": "Masaje Restaurador de 60 Min",
+      "price_usd": 115,
+      "hands_on_minutes": 60,
+      "hot_stones_included": true
+    },
+    {
+      "id": "90MIN",
+      "name_en": "90-Min Deep Recovery",
+      "name_es": "Recuperacion Profunda de 90 Min",
+      "price_usd": 160,
+      "hands_on_minutes": 90,
+      "hot_stones_included": true
+    },
+    {
+      "id": "5PACK",
+      "name_en": "5-Session Family Pass",
+      "name_es": "Pase Familiar de 5 Sesiones",
+      "price_usd": 475,
+      "per_session_usd": 95,
+      "shareable_household": true,
+      "monthly_contract_usd": 0,
+      "hot_stones_included": true
+    }
+  ],
+  "travel_zones": [
+    {"city": "Pueblo", "travel_fee_usd": 0},
+    {"city": "Pueblo West", "travel_fee_usd": 0},
+    {"city": "Canon City", "travel_fee_usd": 20},
+    {"city": "Fountain", "travel_fee_usd": 20},
+    {"city": "Colorado Springs", "travel_fee_usd": 25}
+  ],
+  "tools": [
+    {
+      "name": "list_packages",
+      "description": "Return published in-home massage packages, prices, and complimentary inclusions (read-only).",
+      "input_schema": {"type": "object", "properties": {}, "additionalProperties": false}
+    },
+    {
+      "name": "quote_session",
+      "description": "Compute published base price plus zone travel fee for a package and city (read-only).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "package": {"type": "string", "enum": ["60MIN", "90MIN", "5PACK"]},
+          "city": {"type": "string", "enum": ["Pueblo", "Pueblo West", "Canon City", "Fountain", "Colorado Springs"]}
+        },
+        "required": ["package", "city"],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "compare_competitor_rates",
+      "description": "Compare Bee the Light published rates and hands-on minutes against franchise spa chains and mobile apps.",
+      "input_schema": {"type": "object", "properties": {}, "additionalProperties": false}
+    }
+  ]
+}
