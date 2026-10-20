@@ -1,0 +1,15 @@
+{
+  "name": "Bee the Light Massage Therapy",
+  "short_name": "Bee the Light",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fffdf7",
+  "theme_color": "#d97706",
+  "icons": [
+    {
+      "src": "static/images/bee_logo_square.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
