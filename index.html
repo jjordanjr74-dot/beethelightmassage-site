@@ -8,7 +8,7 @@
   <meta name="description" content="Colorado-licensed, ABMP-insured massage services delivered to your home across Southern Colorado.">
   <link rel="icon" type="image/png" href="static/images/bee_logo_square.png">
   <link rel="apple-touch-icon" href="static/images/bee_logo_square.png">
-  <meta name="theme-color" content="#d97706">
+  <meta name="theme-color" content="#96682d">
   <link rel="canonical" href="https://beethelightmassage.com/">
   <link rel="alternate" hreflang="en" href="https://beethelightmassage.com/">
   <link rel="alternate" hreflang="es" href="https://beethelightmassage.com/?lang=es">
@@ -23,959 +23,11 @@
   <meta name="twitter:title" content="Bee the Light Massage Therapy — In-Home Bodywork, Pueblo &amp; Colorado Springs">
   <meta name="twitter:description" content="Colorado-licensed, ABMP-insured massage services delivered to your home across Southern Colorado.">
   <meta name="twitter:image" content="https://beethelightmassage.com/static/images/home-sanctuary.webp">
-  <style>
-    :root {
-      --bg-warm-light: #fcfaf6;
-      --bg-card: #ffffff;
-      --bg-cream: #fff9f0;
-      --honey-gold: #d97706;
-      --honey-light: #fbbf24;
-      --honey-pale: #fef3c7;
-      --honey-glow: rgba(245, 158, 11, 0.18);
-      --healing-sage: #059669;
-      --sage-light: #ecfdf5;
-      --sage-border: rgba(5, 150, 105, 0.22);
-      --text-main: #1e293b;
-      --text-muted: #64748b;
-      --border-subtle: #e2e8f0;
-      --border-gold: #fde68a;
-      --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.04);
-      --shadow-md: 0 12px 30px rgba(217, 119, 6, 0.08);
-      --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.07);
-      --radius-lg: 20px;
-      --radius-md: 12px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: var(--bg-warm-light);
-      color: var(--text-main);
-      overflow-x: hidden;
-      line-height: 1.65;
-    }
-
-    /* Ambient Warm Healing Glow */
-    .ambient-sunbeam {
-      position: fixed;
-      top: -160px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 1000px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(254, 243, 199, 0.75) 0%, rgba(252, 250, 246, 0) 70%);
-      filter: blur(80px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Sticky Sanctuary Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-    .header-content {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-    .brand-logo-img {
-      width: 72px;
-      height: 72px;
-      border-radius: 14px;
-      object-fit: contain;
-      background: #ffffff;
-      box-shadow: 0 4px 18px var(--honey-glow);
-      border: 1.5px solid var(--border-gold);
-      padding: 2px;
-    }
-    .brand-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--honey-light) 0%, var(--honey-gold) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-      box-shadow: 0 4px 12px var(--honey-glow);
-    }
-    .brand-name {
-      font-family: inherit;
-      font-size: 1.55rem;
-      font-weight: 800;
-      color: var(--text-main);
-      letter-spacing: -0.4px;
-    }
-    .brand-name span {
-      color: var(--honey-gold);
-    }
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .geo-tag {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--sage-light);
-      border: 1px solid var(--sage-border);
-      padding: 6px 14px;
-      border-radius: 30px;
-      font-size: 0.84rem;
-      font-weight: 700;
-      color: var(--healing-sage);
-    }
-    .btn-reserve-nav {
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: #ffffff;
-      font-weight: 700;
-      padding: 9px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      box-shadow: 0 4px 14px var(--honey-glow);
-      transition: all 0.2s;
-    }
-    .btn-reserve-nav:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(217, 119, 6, 0.25);
-    }
-
-    /* Hero Section — Bright & Tranquil */
-    .hero-wrap {
-      position: relative;
-      max-width: 1280px;
-      margin: 2.5rem auto 4.5rem;
-      padding: 0 2rem;
-      z-index: 1;
-    }
-    .hero-card {
-      position: relative;
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid var(--border-gold);
-      background: #ffffff;
-      box-shadow: var(--shadow-lg);
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      align-items: stretch;
-    }
-    @media (max-width: 960px) {
-      .hero-card { grid-template-columns: 1fr; }
-    }
-    .hero-text-side {
-      padding: 4rem;
-      position: relative;
-      z-index: 2;
-    }
-    @media (max-width: 768px) {
-      .hero-text-side { padding: 2.5rem 1.8rem; }
-    }
-    .hero-badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--honey-pale);
-      border: 1px solid var(--honey-light);
-      color: #92400e;
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 1.4rem;
-    }
-    .hero-title {
-      font-family: inherit;
-      font-size: clamp(2.3rem, 4vw, 3rem);
-      font-weight: 800;
-      line-height: 1.18;
-      color: #0f172a;
-      margin-bottom: 1.2rem;
-      letter-spacing: -0.6px;
-      /* keep the two headline lines balanced so the second line never drops a single
-         word ("Door") onto its own line - a widow reads as unfinished on a hero */
-      text-wrap: balance;
-    }
-    @media (min-width: 961px) {
-      .hero-text-side { padding: 3.2rem 3.4rem; }
-      .hero-title br { display: none; }
-      .hero-media-side { min-height: 560px; }
-    }
-    .hero-title span {
-      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero-desc {
-      font-size: 1.15rem;
-      color: #475569;
-      line-height: 1.7;
-      margin-bottom: 2.2rem;
-    }
-    .hero-action-group {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .btn-main-cta {
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: #ffffff;
-      font-size: 1.05rem;
-      font-weight: 800;
-      padding: 1.1rem 2.2rem;
-      border-radius: 12px;
-      text-decoration: none;
-      box-shadow: 0 8px 24px var(--honey-glow);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.25s;
-    }
-    .btn-main-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(217, 119, 6, 0.3);
-    }
-    .btn-sub-cta {
-      background: #f8fafc;
-      color: #334155;
-      border: 1px solid var(--border-subtle);
-      font-size: 1.02rem;
-      font-weight: 700;
-      padding: 1.1rem 1.8rem;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .btn-sub-cta:hover {
-      background: #ffffff;
-      border-color: var(--honey-light);
-      color: var(--honey-gold);
-    }
-    .hero-media-side {
-      position: relative;
-      height: auto;
-      min-height: 480px;
-      overflow: hidden;
-    }
-    .hero-media-side img {
-      position: absolute;
-      inset: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 57% center;
-    }
-    .hero-media-badge {
-      position: absolute;
-      bottom: 22px;
-      left: 22px;
-      right: auto;
-      max-width: calc(100% - 44px);
-      background: rgba(255, 252, 246, 0.96);
-      border: 1px solid rgba(255,255,255,.8);
-      border-radius: 12px;
-      padding: 10px 14px;
-      box-shadow: 0 8px 24px rgba(35, 31, 23, .16);
-      display: grid;
-      gap: 2px;
-    }
-    .image-note {
-      color: #686354;
-      font-size: .68rem;
-      font-weight: 600;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
-    .hero-offer {
-      color: #5b3b19;
-      font-size: .84rem;
-      font-weight: 800;
-    }
-    .eyebrow-rule {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .eyebrow-rule::before {
-      content: "";
-      width: 24px;
-      height: 1px;
-      background: currentColor;
-      opacity: .7;
-    }
-    .cta-note {
-      margin-top: 1rem;
-      color: #596154;
-      font-size: .9rem;
-      line-height: 1.5;
-    }
-    .section-header h2 { text-wrap: balance; }
-    .section-header p { max-width: 62ch; margin-inline: auto; }
-    .dispatch-box { align-items: center; }
-    .btn-main-cta:focus-visible, .btn-sub-cta:focus-visible,
-    .btn-reserve-nav:focus-visible, .specialty-btn:focus-visible,
-    a:focus-visible { outline: 3px solid #365f4a; outline-offset: 3px; }
-    @media (max-width: 960px) {
-      .hero-media-side { height: 390px; min-height: 390px; }
-      .hero-media-side img { min-height: 0; max-height: none; }
-    }
-    @media (max-width: 600px) {
-      .header-content { padding: .65rem 1rem; }
-      .brand { gap: 8px; }
-      .brand-logo-img { width: 48px; height: 48px; }
-      .brand-name { font-size: 1.02rem; line-height: 1.15; }
-      .header-actions { gap: 8px; }
-      .header-actions .geo-tag { display: none; }
-      .btn-reserve-nav { padding: 10px 12px; font-size: .8rem; }
-      .hero-wrap { margin: 1rem auto 2.5rem; padding: 0 .75rem; }
-      .hero-card { border-radius: 18px; }
-      .hero-text-side { padding: 1.6rem 1.2rem 1.4rem; }
-      .hero-badge-pill { font-size: .72rem; line-height: 1.35; padding: 7px 11px; margin-bottom: 1rem; }
-      .hero-title { font-size: clamp(2rem, 9vw, 2.7rem); line-height: 1.1; }
-      .hero-desc { font-size: 1rem; margin-bottom: 1.4rem; }
-      .hero-action-group { gap: 10px; }
-      .hero-action-group a { min-height: 48px; justify-content: center; width: 100%; padding: .85rem 1rem; }
-      .hero-media-side { height: 265px; min-height: 265px; }
-      .hero-media-side img { min-height: 0; max-height: none; }
-      .hero-media-badge { bottom: 12px; left: 12px; max-width: calc(100% - 24px); padding: 8px 10px; }
-      .hero-offer { font-size: .75rem; }
-      .healing-value-strip { grid-template-columns: 1fr; gap: .7rem; margin-bottom: 3rem; padding: 0 1rem; }
-      .value-card { padding: .95rem; }
-      .value-icon-box { width: 42px; height: 42px; font-size: 1.15rem; }
-      .specialties-section, .gallery-strip, .pricing-wrap, .dispatch-wrap, .reviews-wrap { padding-inline: 1rem; margin-bottom: 3.25rem; }
-      .specialties-grid, .pricing-grid, .reviews-grid { grid-template-columns: 1fr; gap: 1rem; }
-      .specialty-card { padding: 1.35rem; }
-      .price-card { padding: 2rem 1.4rem 1.4rem; }
-      .section-header { margin-bottom: 1.7rem; }
-      .section-header h2 { font-size: clamp(1.8rem, 7vw, 2.3rem); }
-      .dispatch-box { padding: 1.35rem; gap: 1.4rem; }
-      .field-row { gap: .8rem; }
-      .reviews-grid { min-width: 0; }
-      .review-box { padding: 1.4rem; }
-      footer { padding: 2.25rem 1rem; }
-      .regulatory-badge { line-height: 1.6; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-    }
-
-    /* Healing Value Strip (Highlights: Complimentary Hot Stones) */
-    .healing-value-strip {
-      max-width: 1280px;
-      margin: 0 auto 4.5rem;
-      padding: 0 2rem;
-      display: grid;
-      /* 220px min so all FIVE value cards sit on one row at desktop width.
-         At 260px only four fit in the 1216px content box (5 x 260 + 4 x 24 gap = 1396 > 1216),
-         so the 5th card orphaned onto its own row - the classic "not quite finished" tell. */
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    .value-card {
-      background: #ffffff;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 1.6rem;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .value-card.highlight {
-      border-color: var(--honey-light);
-      background: linear-gradient(135deg, #ffffff 0%, #fffbf0 100%);
-      box-shadow: 0 8px 25px var(--honey-glow);
-    }
-    .value-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--honey-gold);
-    }
-    .value-icon-box {
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: var(--honey-pale);
-      border: 1px solid var(--border-gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .value-icon-box.green {
-      background: var(--sage-light);
-      border-color: var(--sage-border);
-    }
-    .value-text h4 {
-      font-size: 1rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 2px;
-    }
-    .value-text p {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    /* Section Headers */
-    .section-header {
-      text-align: center;
-      max-width: 780px;
-      margin: 0 auto 3.2rem;
-      padding: 0 1.5rem;
-    }
-    .kicker-sub {
-      text-transform: uppercase;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: var(--healing-sage);
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-    .section-header h2 {
-      font-family: inherit;
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.4px;
-    }
-    .section-header p {
-      font-size: 1.08rem;
-      color: #475569;
-      line-height: 1.65;
-    }
-
-    /* Massage Focus Areas Grid (Headaches, Back Pain, Arthritis, Deep Tissue, Senior Citizen, Pediatric) */
-    .specialties-section {
-      max-width: 1280px;
-      margin: 0 auto 5.5rem;
-      padding: 0 2rem;
-      position: relative;
-      z-index: 1;
-    }
-    .specialties-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.8rem;
-    }
-    .specialty-card {
-      background: #ffffff;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 2.2rem;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.25s;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .specialty-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--honey-light);
-      box-shadow: var(--shadow-md);
-    }
-    .specialty-top {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 1.1rem;
-    }
-    .specialty-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: var(--honey-pale);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      flex-shrink: 0;
-    }
-    .specialty-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: #0f172a;
-    }
-    .specialty-desc {
-      font-size: 0.95rem;
-      color: #475569;
-      line-height: 1.65;
-      margin-bottom: 1.4rem;
-    }
-    .specialty-pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 1.4rem;
-    }
-    .specialty-pill {
-      background: #f1f5f9;
-      color: #334155;
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
-    .specialty-btn {
-      color: var(--honey-gold);
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .specialty-btn:hover {
-      text-decoration: underline;
-    }
-
-    /* Atmosphere Imagery Gallery */
-    .gallery-strip {
-      max-width: 1280px;
-      margin: 0 auto 5.5rem;
-      padding: 0 2rem;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    @media (max-width: 860px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-    }
-    .gallery-item {
-      position: relative;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      height: 270px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-subtle);
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-    .gallery-item:hover img {
-      transform: scale(1.04);
-    }
-    .gallery-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 1.2rem;
-      background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.85) 100%);
-      color: #ffffff;
-      font-size: 0.92rem;
-      font-weight: 700;
-    }
-
-    /* Curated Service Packages */
-    .pricing-wrap {
-      max-width: 1280px;
-      margin: 0 auto 5.5rem;
-      padding: 0 2rem;
-    }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-      gap: 2rem;
-    }
-    .price-card {
-      background: #ffffff;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 2.8rem 2.2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.25s;
-    }
-    .price-card.featured {
-      border: 2px solid var(--honey-light);
-      background: linear-gradient(180deg, #fffdf8 0%, #ffffff 100%);
-      box-shadow: var(--shadow-md);
-    }
-    .price-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
-    }
-    .popular-tag {
-      position: absolute;
-      top: -14px;
-      right: 28px;
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      color: #ffffff;
-      font-size: 0.76rem;
-      font-weight: 800;
-      padding: 5px 16px;
-      border-radius: 20px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      box-shadow: 0 4px 12px var(--honey-glow);
-    }
-    .package-name {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 0.4rem;
-    }
-    .package-desc {
-      font-size: 0.92rem;
-      color: #64748b;
-      margin-bottom: 1.8rem;
-    }
-    .package-price {
-      font-size: 2.8rem;
-      font-weight: 800;
-      color: var(--honey-gold);
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-      margin-bottom: 1.8rem;
-    }
-    .package-price span {
-      font-size: 1rem;
-      color: #94a3b8;
-      font-weight: 500;
-    }
-    .feature-list {
-      list-style: none;
-      margin-bottom: 2.2rem;
-    }
-    .feature-list li {
-      margin-bottom: 0.85rem;
-      font-size: 0.94rem;
-      color: #334155;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    .check-green {
-      color: var(--healing-sage);
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
-    /* Live Booking & Dispatch Form */
-    .dispatch-wrap {
-      max-width: 1280px;
-      margin: 0 auto 5.5rem;
-      padding: 0 2rem;
-    }
-    .dispatch-box {
-      background: #ffffff;
-      border: 1px solid var(--border-gold);
-      border-radius: var(--radius-lg);
-      padding: 3.5rem 3rem;
-      box-shadow: var(--shadow-lg);
-      display: grid;
-      grid-template-columns: 1.25fr 1fr;
-      gap: 3.5rem;
-    }
-    @media (max-width: 900px) {
-      .dispatch-box { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
-    }
-    .form-group-title {
-      font-family: inherit;
-      font-size: 1.8rem;
-      color: #0f172a;
-      margin-bottom: 0.5rem;
-    }
-    .form-group-sub {
-      color: #64748b;
-      font-size: 0.95rem;
-      margin-bottom: 1.8rem;
-    }
-    .field-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin-bottom: 1.1rem;
-    }
-    @media (max-width: 600px) {
-      .field-row { grid-template-columns: 1fr; }
-    }
-    .field-label {
-      display: block;
-      font-size: 0.86rem;
-      font-weight: 700;
-      color: #334155;
-      margin-bottom: 0.45rem;
-    }
-    .form-control {
-      width: 100%;
-      background: #f8fafc;
-      border: 1px solid var(--border-subtle);
-      color: #0f172a;
-      padding: 0.95rem 1.2rem;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      font-family: inherit;
-      transition: all 0.2s;
-    }
-    .form-control:focus {
-      outline: none;
-      background: #ffffff;
-      border-color: var(--honey-gold);
-      box-shadow: 0 0 0 3px var(--honey-glow);
-    }
-    .time-slot-picker {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-      margin-bottom: 1.2rem;
-    }
-    .time-slot-btn {
-      background: #f1f5f9;
-      border: 1px solid var(--border-subtle);
-      color: #475569;
-      padding: 8px 10px;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .time-slot-btn:hover {
-      background: #e2e8f0;
-      color: #0f172a;
-    }
-    .time-slot-btn.active {
-      background: var(--honey-gold);
-      color: #ffffff;
-      border-color: var(--honey-gold);
-    }
-    .pressure-picker {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-    }
-    @media (max-width: 600px) {
-      .pressure-picker {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    .pressure-btn {
-      background: #f8fafc;
-      border: 1.5px solid var(--border-subtle);
-      color: #334155;
-      padding: 0.65rem 0.5rem;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      cursor: pointer;
-      text-align: center;
-      transition: all 0.2s;
-    }
-    .pressure-btn:hover {
-      background: #f1f5f9;
-      border-color: #cbd5e1;
-    }
-    .pressure-btn.active {
-      background: #fef3c7;
-      color: #92400e;
-      border-color: var(--honey-gold);
-    }
-    .hot-stones-checkbox-card {
-      background: var(--bg-cream);
-      border: 1px solid var(--border-gold);
-      border-radius: 12px;
-      padding: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 1.4rem;
-      cursor: pointer;
-    }
-    .hot-stones-checkbox-card input[type="checkbox"] {
-      width: 20px;
-      height: 20px;
-      accent-color: var(--honey-gold);
-      cursor: pointer;
-    }
-    .hot-stones-text h5 {
-      font-size: 0.92rem;
-      font-weight: 800;
-      color: #92400e;
-      margin-bottom: 2px;
-    }
-    .hot-stones-text p {
-      font-size: 0.82rem;
-      color: #78350f;
-    }
-
-    /* Summary Card */
-    .summary-card {
-      background: linear-gradient(180deg, #fffbf0 0%, #ffffff 100%);
-      border: 1px solid var(--border-gold);
-      border-radius: var(--radius-md);
-      padding: 2.2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: var(--shadow-sm);
-    }
-    .summary-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-      color: #64748b;
-    }
-    .summary-item strong {
-      color: #0f172a;
-    }
-    .summary-total {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      border-top: 2px dashed #fde68a;
-      padding-top: 1.2rem;
-      margin-top: 1.2rem;
-    }
-    .summary-total-label {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #0f172a;
-    }
-    .summary-total-amount {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--honey-gold);
-    }
-
-    /* Verified Reviews */
-    .reviews-wrap {
-      max-width: 1280px;
-      margin: 0 auto 5.5rem;
-      padding: 0 2rem;
-    }
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.8rem;
-    }
-    .review-box {
-      background: #ffffff;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 2.2rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .review-stars {
-      color: #f59e0b;
-      font-size: 1.1rem;
-      margin-bottom: 0.8rem;
-      letter-spacing: 2px;
-    }
-    .review-quote {
-      font-size: 0.96rem;
-      color: #334155;
-      line-height: 1.65;
-      margin-bottom: 1.2rem;
-      font-style: italic;
-    }
-    .review-author {
-      font-weight: 800;
-      color: #0f172a;
-      font-size: 0.95rem;
-    }
-    .review-context {
-      font-size: 0.82rem;
-      color: var(--healing-sage);
-      font-weight: 600;
-    }
-
-    /* Footer & DORA Disclosures */
-    footer {
-      border-top: 1px solid var(--border-subtle);
-      padding: 3.5rem 2rem;
-      text-align: center;
-      background: #ffffff;
-      color: #64748b;
-      font-size: 0.88rem;
-      width: 100%;
-    }
-    .regulatory-badge {
-      display: inline-block;
-      margin-bottom: 1.2rem;
-      padding: 6px 18px;
-      background: var(--sage-light);
-      border: 1px solid var(--sage-border);
-      border-radius: 20px;
-      font-size: 0.82rem;
-      color: var(--healing-sage);
-      font-weight: 700;
-    }
-    footer a {
-      color: var(--honey-gold);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    @media (max-width: 900px) { .dispatch-box { grid-template-columns: minmax(0, 1fr); } .dispatch-box > * { min-width: 0; max-width: 100%; } .booking-cta, .summary-card { min-width: 0; max-width: 100%; overflow-wrap: anywhere; } }
-  
-    .visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
-    /* Use one system stack so headings and body copy render consistently without remote fonts. */
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    .brand-name, .hero-title, .section-header h2, .form-group-title, .booking-note,
-    .summary-card h4 { font-family: inherit; }
-    /* Keep each card inside narrow mobile tracks; min-width:auto otherwise preserves the 340px desktop minimum. */
-    .specialty-card, .price-card, .review-box { min-width: 0; width: 100%; }
-    .specialty-btn, .btn-secondary { min-height: 44px; }
-    .summary-total { display: grid; grid-template-columns: minmax(0, 1fr); gap: .5rem; align-items: start; }
-    .summary-total-label, .summary-total-amount { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
-    .summary-total-amount { font-size: 1.05rem; line-height: 1.4; }
-    .booking-inquiry { grid-template-columns: minmax(0, 1fr) minmax(220px, .65fr); align-items: center; }
-    .booking-step { margin: 1.25rem 0; color: #334155; line-height: 1.65; }
-    .booking-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
-    .booking-actions a { min-height: 48px; justify-content: center; align-items: center; }
-    .booking-actions .btn-secondary { text-decoration: none; background: #f8fafc; color: #334155; border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1rem 1.5rem; display: inline-flex; font-size: 1rem; font-weight: 700; }
-    .booking-privacy, .booking-note span { color: #475569; font-size: .9rem; margin-top: .8rem; }
-    .booking-note { display: grid; gap: .5rem; background: #fffbf0; border: 1px solid var(--border-gold); border-radius: 12px; padding: 1.4rem; }
-    .hot-stones-icon svg { display: block; width: 25px; height: 25px; }
-    @media (max-width: 900px) {
-      .booking-inquiry { grid-template-columns: minmax(0, 1fr); }
-      .dispatch-box > * { min-width: 0; max-width: 100%; }
-    }
-    @media (max-width: 600px) {
-      .specialties-grid, .pricing-grid, .reviews-grid { grid-template-columns: minmax(0, 1fr); }
-      .specialties-grid > *, .pricing-grid > *, .reviews-grid > * { min-width: 0; width: 100%; }
-      .booking-inquiry { padding: 1.1rem; }
-      .booking-actions { flex-direction: column; }
-      .booking-actions a { width: 100%; }
-    }
-    
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="static/fonts.css">
+  <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "Bee the Light Massage Therapy", "description": "Colorado-licensed, ABMP-insured therapeutic massage delivered to your home across Southern Colorado.", "url": "https://beethelightmassage.com/", "image": "https://beethelightmassage.com/static/images/home-sanctuary.webp", "telephone": "+14024992936", "priceRange": "$$", "areaServed": [{"@type": "City", "name": "Pueblo"}, {"@type": "City", "name": "Pueblo West"}, {"@type": "City", "name": "Colorado Springs"}, {"@type": "City", "name": "Fountain"}, {"@type": "City", "name": "Ca\u00f1on City"}], "availableChannel": {"@type": "ServiceChannel", "servicePhone": {"@type": "ContactPoint", "telephone": "+14024992936", "contactType": "reservations"}, "availableLanguage": "English"}, "knowsAbout": ["Treatment of Headaches", "Headaches", "Tension & Cervicogenic Headaches", "Back Pain", "Arthritis", "Deep Tissue Massage", "Senior Citizen Massage", "Pediatric Massage", "Hot Stone Therapy"], "slogan": "A Place of Tranquility & Healing, Delivered to Your Door", "makesOffer": [{"@type": "Offer", "name": "60-Minute Therapeutic Massage"}, {"@type": "Offer", "name": "90-Minute Therapeutic Massage"}, {"@type": "Offer", "name": "Five-Session Package"}, {"@type": "Offer", "name": "Corporate Wellness"}, {"@type": "Offer", "name": "Corporate Executive"}]}</script>
 <!-- Cloudflare Web Analytics --><script defer type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b67c7b78a6b14b878db6324bbc537a95"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -984,19 +36,34 @@
   <div class="ambient-sunbeam"></div>
 
   <!-- Header -->
+  <div class="site-strip">
+    <div class="site-strip-inner">
+      <div>Colorado-Licensed &middot; ABMP-Insured &middot; 100% Woman Owned &amp; Operated</div>
+      <div class="site-strip-right">
+        <span>Pueblo, Ca&ntilde;on City &amp; Springs Fleet</span>
+        <a href="tel:4024992936">402-499-2936</a>
+      </div>
+    </div>
+  </div>
   <header>
     <div class="header-content">
-      <a href="#" class="brand">
-        <img src="static/images/bee_logo_square.png" alt="Golden Bee and Rose Laurel Logo" class="brand-logo-img">
+      <a href="/" class="brand">
+        <img src="static/images/bee_logo_square.png" alt="Golden bee and rose laurel emblem" class="brand-logo-img">
         <div class="brand-name">Bee the light <span>massage therapy</span></div>
       </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#specialties-section">Massage Services</a>
+        <a href="#rates">Rates</a>
+        <a href="#service-areas">Service Areas</a>
+        <a href="/booking-policy.html">Booking Policy</a>
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language / Idioma">
+        <button type="button" id="lang-en" class="active">EN</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" id="lang-es">ES</button>
+      </div>
       <div class="header-actions">
-        <div class="geo-tag" style="background: rgba(245, 158, 11, 0.12); color: #b45309; border-color: rgba(245, 158, 11, 0.3); font-weight: 700;">
-          🌸 Woman-Owned &amp; Operated
-        </div>
-        <div class="geo-tag">
-          📍 Pueblo, Cañon City &amp; Springs Fleet
-        </div>
         <a href="#booking-section" class="btn-reserve-nav">Check availability</a>
       </div>
     </div>
@@ -1007,7 +74,7 @@
     <div class="hero-card">
       <div class="hero-text-side">
         <div class="hero-badge-pill">
-          ✨ Colorado-licensed · ABMP-insured · Woman-owned
+          Colorado-licensed · ABMP-insured · Woman-owned
         </div>
         <h1 class="hero-title">
           In-home massage, <span>delivered to your door.</span>
@@ -1037,35 +104,35 @@
   <!-- Healing Value Strip -->
   <div class="healing-value-strip">
     <div class="value-card highlight">
-      <div class="value-icon-box">🌸</div>
+      <div class="value-num">01</div>
       <div class="value-text">
         <h4>Woman-Owned &amp; Operated</h4>
         <p>Dedicated local compassionate care rooted in Colorado.</p>
       </div>
     </div>
     <div class="value-card">
-      <div class="value-icon-box hot-stones-icon"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><ellipse cx="16" cy="23" rx="11" ry="5" fill="#b77b45"/><ellipse cx="11" cy="15" rx="8" ry="4.5" fill="#d9a56c"/><ellipse cx="21" cy="13" rx="7" ry="4" fill="#c58a52"/><path d="M11 8c-2-2 1-3 0-5m6 5c-2-2 1-3 0-5m6 5c-2-2 1-3 0-5" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linecap="round"/></svg><span class="visually-hidden">Hot stones</span></div>
+      <div class="value-num">02</div>
       <div class="value-text">
         <h4>Complimentary Hot Stones</h4>
         <p>Available on any session upon request at zero charge.</p>
       </div>
     </div>
     <div class="value-card">
-      <div class="value-icon-box green">🧈</div>
+      <div class="value-num">03</div>
       <div class="value-text">
         <h4>All-Natural Handcrafted Body Butters</h4>
         <p>Pure, nutrient-rich artisanal whipped formulas.</p>
       </div>
     </div>
     <div class="value-card">
-      <div class="value-icon-box">🏡</div>
+      <div class="value-num">04</div>
       <div class="value-text">
         <h4>Zero Clinic Commute</h4>
         <p>Stay deeply relaxed in your own space after session.</p>
       </div>
     </div>
     <div class="value-card">
-      <div class="value-icon-box green">⏱️</div>
+      <div class="value-num">05</div>
       <div class="value-text">
         <h4>Two-Hour Arrival Windows</h4>
         <p>Confirm your address and appointment time before booking.</p>
@@ -1087,7 +154,7 @@
       <div class="specialty-card">
         <div>
           <div class="specialty-top">
-            <div class="specialty-icon">💆‍♀️</div>
+            <div class="specialty-num">01</div>
             <div>
               <div class="specialty-title">Treatment of Headaches</div>
             </div>
@@ -1108,7 +175,7 @@
       <div class="specialty-card">
         <div>
           <div class="specialty-top">
-            <div class="specialty-icon">🩺</div>
+            <div class="specialty-num">02</div>
             <div>
               <div class="specialty-title">Back &amp; Hip Focus</div>
             </div>
@@ -1129,7 +196,7 @@
       <div class="specialty-card">
         <div>
           <div class="specialty-top">
-            <div class="specialty-icon">🤲</div>
+            <div class="specialty-num">03</div>
             <div>
               <div class="specialty-title">Arthritis &amp; Joint Mobility</div>
             </div>
@@ -1150,7 +217,7 @@
       <div class="specialty-card">
         <div>
           <div class="specialty-top">
-            <div class="specialty-icon">⚡</div>
+            <div class="specialty-num">04</div>
             <div>
               <div class="specialty-title">Deep Tissue &amp; Myofascial</div>
             </div>
@@ -1171,7 +238,7 @@
       <div class="specialty-card">
         <div>
           <div class="specialty-top">
-            <div class="specialty-icon">🌸</div>
+            <div class="specialty-num">05</div>
             <div>
               <div class="specialty-title">Senior Citizen Restorative</div>
             </div>
@@ -1192,7 +259,7 @@
       <div class="specialty-card">
         <div>
           <div class="specialty-top">
-            <div class="specialty-icon">🌱</div>
+            <div class="specialty-num">06</div>
             <div>
               <div class="specialty-title">Massage Techniques</div>
             </div>
@@ -1213,7 +280,7 @@
       <div class="specialty-card">
         <div>
           <div class="specialty-top">
-            <div class="specialty-icon">🏃</div>
+            <div class="specialty-num">07</div>
             <div>
               <div class="specialty-title">Athletes &amp; Sports Performance</div>
             </div>
@@ -1234,7 +301,7 @@
       <div class="specialty-card">
         <div>
           <div class="specialty-top">
-            <div class="specialty-icon">🕊️</div>
+            <div class="specialty-num">08</div>
             <div>
               <div class="specialty-title">Hospice &amp; Palliative Care</div>
             </div>
@@ -1255,7 +322,7 @@
       <div class="specialty-card">
         <div>
           <div class="specialty-top">
-            <div class="specialty-icon">🩺</div>
+            <div class="specialty-num">09</div>
             <div>
               <div class="specialty-title">Post-Surgical Muscle Release</div>
             </div>
@@ -1274,9 +341,9 @@
 
     </div>
   
-    <aside id="headache-clinical-focus" style="max-width: 1280px; margin: 2rem auto 0; padding: 1.4rem 1.6rem; background: #fffbf0; border: 1.5px solid var(--border-gold); border-radius: 16px; line-height: 1.65;">
-      <h3 style="font-size: 1.15rem; color: var(--text-main); margin: 0 0 0.45rem;">Clinical Focus: Treatment of Headaches (Suboccipital, Cervical &amp; Myofascial Care)</h3>
-      <p style="margin: 0; font-size: 0.94rem; color: var(--text-muted);">
+    <aside id="headache-clinical-focus" class="clinical-note">
+      <h3>Clinical Focus: Treatment of Headaches (Suboccipital, Cervical &amp; Myofascial Care)</h3>
+      <p>
         Peer-reviewed clinical studies show that targeted myofascial and trigger-point bodywork over the suboccipital, upper-trapezius, sternocleidomastoid, and temporalis muscles supports measurable reductions in headache frequency, pericranial tenderness, and neck strain in adults with tension-type and cervicogenic headaches (Quinn et al., <em>American Journal of Public Health</em>; Moraska et al., <em>Clinical Journal of Pain</em>; Chaibi &amp; Russell, <em>Journal of Manual &amp; Manipulative Therapy</em>). Because bright traffic and driving home after a session can re-trigger cranial and neck tension, our in-home sessions let you rest immediately in your own darkened room. Massage is a supportive wellness service and does not replace physician evaluation or neurological care.
       </p>
     </aside>
@@ -1301,7 +368,7 @@
   </div>
 
   <!-- Curated Packages -->
-  <section class="pricing-wrap">
+  <section id="rates" class="pricing-wrap">
     <div class="section-header">
       <span class="kicker-sub">Clear &amp; Transparent Rates</span>
       <h2>In-Home Massage Rates</h2>
@@ -1323,7 +390,7 @@
             <li><span class="check-green">✓</span> Travel fee confirmed before payment</li>
           </ul>
         </div>
-        <a href="sms:4024992936?body=I%20would%20like%20to%20ask%20about%20the%2060-Min%20massage%20package%20%28%24115%29.%20Please%20confirm%20appointment%20availability%2C%20address%20coverage%2C%20any%20travel%20fee%2C%20the%20final%20total%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-sub-cta" style="display:flex;justify-content:center;align-items:center;width:100%;text-decoration:none;text-align:center;" aria-label="Check availability — Text about 60-Min ($115); opens a draft text only">Check availability — Text about 60-Min ($115)</a>
+        <a href="sms:4024992936?body=I%20would%20like%20to%20ask%20about%20the%2060-Min%20massage%20package%20%28%24115%29.%20Please%20confirm%20appointment%20availability%2C%20address%20coverage%2C%20any%20travel%20fee%2C%20the%20final%20total%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-sub-cta" aria-label="Check availability — Text about 60-Min ($115); opens a draft text only">Check availability — Text about 60-Min ($115)</a>
       </div>
 
       <!-- 90MIN -->
@@ -1341,7 +408,7 @@
             <li><span class="check-green">✓</span> Unhurried post-session rest in your home</li>
           </ul>
         </div>
-        <a href="sms:4024992936?body=I%20would%20like%20to%20ask%20about%20the%2090-Min%20massage%20package%20%28%24160%29.%20Please%20confirm%20appointment%20availability%2C%20address%20coverage%2C%20any%20travel%20fee%2C%20the%20final%20total%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-main-cta" style="display:flex;justify-content:center;align-items:center;width:100%;text-decoration:none;text-align:center;" aria-label="Check availability — Text about 90-Min ($160); opens a draft text only">Check availability — Text about 90-Min ($160)</a>
+        <a href="sms:4024992936?body=I%20would%20like%20to%20ask%20about%20the%2090-Min%20massage%20package%20%28%24160%29.%20Please%20confirm%20appointment%20availability%2C%20address%20coverage%2C%20any%20travel%20fee%2C%20the%20final%20total%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-main-cta" aria-label="Check availability — Text about 90-Min ($160); opens a draft text only">Check availability — Text about 90-Min ($160)</a>
       </div>
 
       <!-- 5PACK -->
@@ -1357,70 +424,70 @@
             <li><span class="check-green">✓</span> Contact the practice to confirm current pass terms</li>
           </ul>
         </div>
-        <a href="sms:4024992936?body=I%20would%20like%20to%20ask%20about%20the%205-Pack%20massage%20package%20%28%24475%29.%20Please%20confirm%20appointment%20availability%2C%20address%20coverage%2C%20any%20travel%20fee%2C%20the%20final%20total%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-sub-cta" style="display:flex;justify-content:center;align-items:center;width:100%;text-decoration:none;text-align:center;" aria-label="Check availability — Text about 5-Pack ($475); opens a draft text only">Check availability — Text about 5-Pack ($475)</a>
+        <a href="sms:4024992936?body=I%20would%20like%20to%20ask%20about%20the%205-Pack%20massage%20package%20%28%24475%29.%20Please%20confirm%20appointment%20availability%2C%20address%20coverage%2C%20any%20travel%20fee%2C%20the%20final%20total%2C%20and%20written%20payment%2Fcancellation%20terms%20before%20payment.%20This%20message%20does%20not%20reserve%20an%20appointment%20or%20authorize%20a%20charge.%20I%20will%20not%20include%20health%20details." class="btn-sub-cta" aria-label="Check availability — Text about 5-Pack ($475); opens a draft text only">Check availability — Text about 5-Pack ($475)</a>
       </div>
 
     </div>
 
-    <div class="comparison-wrap" style="margin-top: 2.75rem; background: #ffffff; border: 1px solid var(--border-gold); border-radius: 18px; padding: 1.75rem; box-shadow: var(--shadow-sm); overflow-x: auto;">
-      <div style="text-align: center; margin-bottom: 1.25rem;">
+    <div class="comparison-wrap">
+      <div class="comparison-head">
         <span class="kicker-sub">In Today&apos;s Economy &middot; Compare Services &amp; Prices</span>
-        <h3 style="font-size: 1.45rem; color: var(--text-main); margin: 0.35rem 0;">How Our Rates &amp; Value Compare to Franchise Spas &amp; Mobile Apps</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">No mandatory monthly contracts, no 50-minute shortchanged &ldquo;hours,&rdquo; and no $35 hot-stone upcharges.</p>
+        <h3>How Our Rates &amp; Value Compare to Franchise Spas &amp; Mobile Apps</h3>
+        <p>No mandatory monthly contracts, no 50-minute shortchanged &ldquo;hours,&rdquo; and no $35 hot-stone upcharges.</p>
       </div>
-      <table style="width: 100%; border-collapse: collapse; font-size: 0.94rem; min-width: 580px;">
+      <table class="compare-table">
         <thead>
-          <tr style="border-bottom: 2px solid var(--border-gold); text-align: left; background: #fffbf0;">
-            <th style="padding: 12px 14px; color: var(--text-main);">Service &amp; Value</th>
-            <th style="padding: 12px 14px; color: #991b1b;">Franchise Chains (Massage Envy / Hand &amp; Stone)</th>
-            <th style="padding: 12px 14px; color: #475569;">National Mobile Apps (Zeel / Soothe)</th>
-            <th style="padding: 12px 14px; color: #065f46; background: #ecfdf5;">Bee the Light In-Home Massage</th>
+          <tr>
+            <th>Service &amp; Value</th>
+            <th>Franchise Chains (Massage Envy / Hand &amp; Stone)</th>
+            <th>National Mobile Apps (Zeel / Soothe)</th>
+            <th class="col-btl">Bee the Light In-Home Massage</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom: 1px solid var(--border-subtle);">
-            <td style="padding: 12px 14px; font-weight: 700;">60-Min Session Rate</td>
-            <td style="padding: 12px 14px;">$115&ndash;$135 non-member rate <em>(only 50 min hands-on)</em></td>
-            <td style="padding: 12px 14px;">$145&ndash;$185+ <em>(with 18&ndash;20% platform service fee)</em></td>
-            <td style="padding: 12px 14px; background: #ecfdf5; font-weight: 700; color: #065f46;">$115 Pueblo / $140 Springs &middot; Full 60 min hands-on</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--border-subtle);">
-            <td style="padding: 12px 14px; font-weight: 700;">90-Min Deep Recovery</td>
-            <td style="padding: 12px 14px;">$170&ndash;$200 <em>(only 80 min hands-on)</em></td>
-            <td style="padding: 12px 14px;">$200&ndash;$245+ with platform fees</td>
-            <td style="padding: 12px 14px; background: #ecfdf5; font-weight: 700; color: #065f46;">$160 &middot; Full 90 min hands-on</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--border-subtle);">
-            <td style="padding: 12px 14px; font-weight: 700;">Package vs. Contract</td>
-            <td style="padding: 12px 14px;">$75&ndash;$90/mo 12-month auto-debit contract ($900&ndash;$1,080/yr; credits expire 60 days after cancel)</td>
-            <td style="padding: 12px 14px;">$99&ndash;$149/mo membership commitment</td>
-            <td style="padding: 12px 14px; background: #ecfdf5; font-weight: 700; color: #065f46;">$475 5-Session Family Pass ($95/session) &middot; $0 monthly contract &middot; Household shareable</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--border-subtle);">
-            <td style="padding: 12px 14px; font-weight: 700;">Hot Stone Therapy</td>
-            <td style="padding: 12px 14px;">+$30 to $45 add-on fee per session</td>
-            <td style="padding: 12px 14px;">+$25 to $40 add-on or unavailable</td>
-            <td style="padding: 12px 14px; background: #ecfdf5; font-weight: 700; color: #065f46;">$0 &mdash; Complimentary on request</td>
+          <tr>
+            <td class="row-label">60-Min Session Rate</td>
+            <td>$115&ndash;$135 non-member rate <em>(only 50 min hands-on)</em></td>
+            <td>$145&ndash;$185+ <em>(with 18&ndash;20% platform service fee)</em></td>
+            <td class="col-btl">$115 Pueblo / $140 Springs &middot; Full 60 min hands-on</td>
           </tr>
           <tr>
-            <td style="padding: 12px 14px; font-weight: 700;">Travel, Table &amp; Lotions</td>
-            <td style="padding: 12px 14px;">You drive 35&ndash;45 min in traffic &middot; bulk commercial lotion</td>
-            <td style="padding: 12px 14px;">Rotating gig-app contractors &middot; bring your own sheets on some tiers</td>
-            <td style="padding: 12px 14px; background: #ecfdf5; font-weight: 700; color: #065f46;">We come to your door with orthopedic table, fresh linens &amp; handcrafted whipped body butters</td>
+            <td class="row-label">90-Min Deep Recovery</td>
+            <td>$170&ndash;$200 <em>(only 80 min hands-on)</em></td>
+            <td>$200&ndash;$245+ with platform fees</td>
+            <td class="col-btl">$160 &middot; Full 90 min hands-on</td>
+          </tr>
+          <tr>
+            <td class="row-label">Package vs. Contract</td>
+            <td>$75&ndash;$90/mo 12-month auto-debit contract ($900&ndash;$1,080/yr; credits expire 60 days after cancel)</td>
+            <td>$99&ndash;$149/mo membership commitment</td>
+            <td class="col-btl">$475 5-Session Family Pass ($95/session) &middot; $0 monthly contract &middot; Household shareable</td>
+          </tr>
+          <tr>
+            <td class="row-label">Hot Stone Therapy</td>
+            <td>+$30 to $45 add-on fee per session</td>
+            <td>+$25 to $40 add-on or unavailable</td>
+            <td class="col-btl">$0 &mdash; Complimentary on request</td>
+          </tr>
+          <tr>
+            <td class="row-label">Travel, Table &amp; Lotions</td>
+            <td>You drive 35&ndash;45 min in traffic &middot; bulk commercial lotion</td>
+            <td>Rotating gig-app contractors &middot; bring your own sheets on some tiers</td>
+            <td class="col-btl">We come to your door with orthopedic table, fresh linens &amp; handcrafted whipped body butters</td>
           </tr>
         </tbody>
       </table>
-      <aside id="btl-roi-calc" style="margin-top: 1.5rem; padding: 1.25rem; background: #fffbf0; border: 1px solid var(--border-gold); border-radius: 14px;">
-        <p style="margin: 0 0 0.65rem; font-weight: 800; color: var(--text-main); font-size: 1.05rem;" data-i18n="calc_title">Interactive Value Calculator: See What You Gain Each Year</p>
-        <p style="margin: 0 0 0.85rem; font-size: 0.92rem; color: var(--text-muted);">
-          <label for="btlFreq" style="font-weight: 700; margin-right: 8px;" data-i18n="calc_label">Sessions per year:</label>
-          <select id="btlFreq" style="padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border-gold); font-weight: 700; margin-right: 16px;">
+      <aside id="btl-roi-calc" class="roi-calc">
+        <p class="roi-title" data-i18n="calc_title">Interactive Value Calculator: See What You Gain Each Year</p>
+        <p class="roi-row">
+          <label for="btlFreq" data-i18n="calc_label">Sessions per year:</label>
+          <select id="btlFreq" class="roi-select">
             <option value="5">5 Sessions (1 Family Pass)</option>
             <option value="10" selected>10 Sessions (~Monthly Care)</option>
             <option value="15">15 Sessions</option>
             <option value="24">24 Sessions (Bi-Weekly Recovery)</option>
           </select>
-          <span id="btlCalcOut" style="font-weight: 700; color: #065f46;">With 10 sessions/yr on our 5-Pack ($95/session): You save $200 off single rates + $350 in free hot stones + gain 100 extra hands-on minutes vs. 50-min spa chains ($550+ total value, $0 contract).</span>
+          <span id="btlCalcOut">With 10 sessions/yr on our 5-Pack ($95/session): You save $200 off single rates + $350 in free hot stones + gain 100 extra hands-on minutes vs. 50-min spa chains ($550+ total value, $0 contract).</span>
         </p>
       </aside>
     </div>
@@ -1445,17 +512,17 @@
 
   <!-- reviews section removed 2026-10-18: unsourced testimonials with medical outcomes (FTC risk). Re-add only real, consented reviews. -->
 
-<p class="service-area-links" style="text-align:center;margin:1rem auto;padding:0 1rem;">In-home service areas: <a href="/areas/pueblo/">Pueblo</a> · <a href="/areas/pueblo-west/">Pueblo West</a> · <a href="/areas/canon-city/">Cañon City</a> · <a href="/areas/fountain/">Fountain</a> · <a href="/areas/colorado-springs/">Colorado Springs</a></p>
+<p id="service-areas" class="service-area-links">In-home service areas: <a href="/areas/pueblo/">Pueblo</a> · <a href="/areas/pueblo-west/">Pueblo West</a> · <a href="/areas/canon-city/">Cañon City</a> · <a href="/areas/fountain/">Fountain</a> · <a href="/areas/colorado-springs/">Colorado Springs</a></p>
   <!-- Footer -->
   <footer>
     <div class="regulatory-badge">
-      ⚖️ Colorado DORA Licensed Massage Therapist · ABMP Insured · 🌸 Proudly 100% Woman Owned and Operated
+      Colorado DORA Licensed Massage Therapist &middot; ABMP Insured &middot; Proudly 100% Woman Owned and Operated
     </div>
     <p>© 2026 Bee the light massage therapy. All rights reserved.<br>
     Dedicated In-Home Dispatch: <a href="tel:4024992936">402-499-2936</a> · Pueblo, Cañon City &amp; Colorado Springs</p>
-  <p style="text-align:center; font-size:.82rem; margin-top:1rem;">
-        <a href="/privacy.html" style="color:#94a3b8; text-decoration:underline;">Privacy</a> &middot;
-        <a href="/booking-policy.html" style="color:#94a3b8; text-decoration:underline;">Booking &amp; Cancellation</a>
+  <p class="footer-legal">
+        <a href="/privacy.html">Privacy</a> &middot;
+        <a href="/booking-policy.html">Booking &amp; Cancellation</a>
       </p>
     </footer>
 
@@ -1512,20 +579,9 @@
       var revMap = {};
       Object.keys(esMap).forEach(function(k){ revMap[esMap[k]] = k; });
 
-      var bar = document.createElement('aside');
-      bar.setAttribute('aria-label', 'Language selector / Selector de idioma');
-      bar.style.cssText = 'position:fixed;bottom:18px;left:18px;z-index:9999;background:#1e293b;color:#fff;padding:8px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,0.22);font-size:0.84rem;font-weight:700;display:flex;align-items:center;gap:8px;border:2px solid #d97706;';
-      var btnEn = document.createElement('button');
-      btnEn.type = 'button';
-      btnEn.textContent = 'EN';
-      btnEn.style.cssText = 'background:#d97706;color:#fff;border:none;border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:800;font-size:0.8rem;';
-      var btnEs = document.createElement('button');
-      btnEs.type = 'button';
-      btnEs.textContent = 'Español (ES)';
-      btnEs.style.cssText = 'background:transparent;color:#fde68a;border:1px solid #fde68a;border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:800;font-size:0.8rem;';
-      bar.appendChild(btnEn);
-      bar.appendChild(btnEs);
-      document.body.appendChild(bar);
+      // Language switch lives inline in the header (no floating widget).
+      var btnEn = document.getElementById('lang-en');
+      var btnEs = document.getElementById('lang-es');
 
       function applyLang(lang) {
         document.documentElement.setAttribute('data-lang', lang);
@@ -1536,14 +592,15 @@
             if (dict[txt]) el.textContent = dict[txt];
           }
         });
-        btnEn.style.background = lang === 'en' ? '#d97706' : 'transparent';
-        btnEs.style.background = lang === 'es' ? '#d97706' : 'transparent';
-        btnEs.style.color = '#fff';
+        if (btnEn && btnEs) {
+          btnEn.classList.toggle('active', lang === 'en');
+          btnEs.classList.toggle('active', lang === 'es');
+        }
         updateBtlCalc();
         try { localStorage.setItem('btl_lang', lang); } catch(e) {}
       }
-      btnEn.addEventListener('click', function() { applyLang('en'); });
-      btnEs.addEventListener('click', function() { applyLang('es'); });
+      if (btnEn) btnEn.addEventListener('click', function() { applyLang('en'); });
+      if (btnEs) btnEs.addEventListener('click', function() { applyLang('es'); });
       var qLang = new URLSearchParams(location.search).get('lang');
       var saved = null;
       try { saved = localStorage.getItem('btl_lang'); } catch(e) {}
