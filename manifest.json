@@ -1,15 +1,44 @@
 {
+  "id": "/",
   "name": "Bee the Light Massage Therapy",
   "short_name": "Bee the Light",
-  "start_url": "./",
+  "description": "Therapeutic, deep tissue, hot stone, prenatal, and mobile massage therapy across Pueblo & Southern Colorado.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#fffdf7",
-  "theme_color": "#d97706",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait",
+  "background_color": "#1a1612",
+  "theme_color": "#c9a66b",
+  "lang": "en-US",
+  "dir": "ltr",
   "icons": [
     {
-      "src": "static/images/bee_logo_square.png",
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

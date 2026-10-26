@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.beethelightmassage.app",
+      "sha256_cert_fingerprints": [
+        "D3:4E:11:83:11:81:E8:6A:46:78:50:17:A0:53:48:1D:C4:C4:0D:A9:00:B2:8F:72:8C:0F:27:9D:38:04:9B:70"
+      ]
+    }
+  }
+]
