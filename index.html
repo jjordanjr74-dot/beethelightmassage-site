@@ -975,7 +975,18 @@
       .booking-actions a { width: 100%; }
     }
     
-  </style>
+  /* 44px touch-target floor (WCAG 2.5.5) rendered-DOM 2026-11-25 */
+header a, nav a, footer a, [role=tab], button, select, .chip, .pill, .tag, .skip, .back,
+a[href^="mailto:"], a[href^="tel:"], a[download], a[href$=".apk"],
+[class*="btn"], [class*="cta"], [class*="lang"] a, [class*="lang"] button {
+  min-height: 44px; min-width: 44px; display: inline-flex; align-items: center;
+}
+/* inline text links: expand the hit area without changing line layout */
+a { min-height: 44px; }
+p a, h1 a, h2 a, h3 a, h4 a, h5 a, td a, dd a, strong a, b a, em a, span a, a:has(> strong), a:has(> b), a:has(> em), .footer-sister a, .err-hint a, li a {
+  padding: 15px 4px; margin: -15px -4px;
+}
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "Bee the Light Massage Therapy", "description": "Colorado-licensed, ABMP-insured therapeutic massage delivered to your home across Southern Colorado.", "url": "https://beethelightmassage.com/", "image": "https://beethelightmassage.com/static/images/home-sanctuary.webp", "telephone": "+14024992936", "priceRange": "$$", "areaServed": [{"@type": "City", "name": "Pueblo"}, {"@type": "City", "name": "Pueblo West"}, {"@type": "City", "name": "Colorado Springs"}, {"@type": "City", "name": "Fountain"}, {"@type": "City", "name": "Ca\u00f1on City"}], "availableChannel": {"@type": "ServiceChannel", "servicePhone": {"@type": "ContactPoint", "telephone": "+14024992936", "contactType": "reservations"}, "availableLanguage": "English"}, "knowsAbout": ["Treatment of Headaches", "Headaches", "Tension & Cervicogenic Headaches", "Back Pain", "Arthritis", "Deep Tissue Massage", "Senior Citizen Massage", "Pediatric Massage", "Hot Stone Therapy"], "slogan": "A Place of Tranquility & Healing, Delivered to Your Door", "makesOffer": [{"@type": "Offer", "name": "60-Minute Therapeutic Massage"}, {"@type": "Offer", "name": "90-Minute Therapeutic Massage"}, {"@type": "Offer", "name": "Five-Session Package"}, {"@type": "Offer", "name": "Corporate Wellness"}, {"@type": "Offer", "name": "Corporate Executive"}]}</script>
 <!-- Cloudflare Web Analytics --><script defer type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b67c7b78a6b14b878db6324bbc537a95"}'></script><!-- End Cloudflare Web Analytics -->
   <link rel="manifest" href="/manifest.json">
@@ -996,7 +1007,7 @@ summary{display:flex !important;align-items:center;}
   <!-- Header -->
   <header>
     <div class="header-content">
-      <a href="#" class="brand">
+      <a href="/" class="brand">
         <img src="static/images/bee_logo_square.png" alt="Golden Bee and Rose Laurel Logo" class="brand-logo-img">
         <div class="brand-name">Bee the light <span>massage therapy</span></div>
       </a>
