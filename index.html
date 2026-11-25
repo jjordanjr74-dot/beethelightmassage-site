@@ -975,7 +975,11 @@
       .booking-actions a { width: 100%; }
     }
     
-  </style>
+  /* 44px touch-target floor (WCAG 2.5.5), rendered-DOM fix 2026-11-24 */
+#btlFreq,.btn-reserve-nav,a[href^="tel:"],a[href^="/areas/"],footer a,.brand,aside button{min-height:44px;min-width:44px;display:inline-flex;align-items:center}
+#btlFreq{min-width:44px}
+aside button{min-width:44px;justify-content:center}
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "Bee the Light Massage Therapy", "description": "Colorado-licensed, ABMP-insured therapeutic massage delivered to your home across Southern Colorado.", "url": "https://beethelightmassage.com/", "image": "https://beethelightmassage.com/static/images/home-sanctuary.webp", "telephone": "+14024992936", "priceRange": "$$", "areaServed": [{"@type": "City", "name": "Pueblo"}, {"@type": "City", "name": "Pueblo West"}, {"@type": "City", "name": "Colorado Springs"}, {"@type": "City", "name": "Fountain"}, {"@type": "City", "name": "Ca\u00f1on City"}], "availableChannel": {"@type": "ServiceChannel", "servicePhone": {"@type": "ContactPoint", "telephone": "+14024992936", "contactType": "reservations"}, "availableLanguage": "English"}, "knowsAbout": ["Treatment of Headaches", "Headaches", "Tension & Cervicogenic Headaches", "Back Pain", "Arthritis", "Deep Tissue Massage", "Senior Citizen Massage", "Pediatric Massage", "Hot Stone Therapy"], "slogan": "A Place of Tranquility & Healing, Delivered to Your Door", "makesOffer": [{"@type": "Offer", "name": "60-Minute Therapeutic Massage"}, {"@type": "Offer", "name": "90-Minute Therapeutic Massage"}, {"@type": "Offer", "name": "Five-Session Package"}, {"@type": "Offer", "name": "Corporate Wellness"}, {"@type": "Offer", "name": "Corporate Executive"}]}</script>
 <!-- Cloudflare Web Analytics --><script defer type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b67c7b78a6b14b878db6324bbc537a95"}'></script><!-- End Cloudflare Web Analytics -->
   <link rel="manifest" href="/manifest.json">
@@ -990,7 +994,7 @@
   <!-- Header -->
   <header>
     <div class="header-content">
-      <a href="#" class="brand">
+      <a href="/" class="brand">
         <img src="static/images/bee_logo_square.png" alt="Golden Bee and Rose Laurel Logo" class="brand-logo-img">
         <div class="brand-name">Bee the light <span>massage therapy</span></div>
       </a>
