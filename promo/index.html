@@ -71,8 +71,8 @@ section{padding:64px 0}
 .plan .btn{text-align:center}
 .policy{margin-top:22px;background:var(--honey-pale);border-radius:14px;padding:16px 20px;color:var(--ink-2);font-size:.95rem}
 /* video */
-.video-box{border-radius:var(--r-card);overflow:hidden;box-shadow:var(--card);background:#1b130c}
-.video-box video{display:block;width:100%;aspect-ratio:16/9;background:#1b130c}
+.video-box{border-radius:var(--r-card);overflow:hidden;box-shadow:var(--card);background:#fcfaf6}
+.video-box video{display:block;width:100%;aspect-ratio:16/9;background:#fcfaf6}
 /* areas */
 .areas ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
 .areas li a{display:inline-block;padding:10px 18px;border-radius:999px;background:#fff;box-shadow:var(--card);text-decoration:none;color:var(--ink);font-weight:600}
@@ -96,6 +96,13 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
 }
 @media (min-width:1080px){.plans{grid-template-columns:repeat(3,1fr)}}
 </style>
+<style id="tap-target-floor-2026-11-25">
+a[href],button,input,select,textarea,[role="button"],summary{min-height:44px !important;}
+button,input,select,textarea,[role="button"]{min-width:44px !important;}
+nav a,header a,footer a,[class*="footer"] a,p a,li a,a[class~="back"]{display:inline-flex !important;align-items:center;min-width:44px;}
+summary{display:flex !important;align-items:center;}
+</style>
+<style id="promo-hero-legibility-2026-11-25">section:has(video) :is(h1,h2,h3,p,a,span,div){text-shadow:0 1px 4px rgba(0,0,0,.6)}</style>
 </head>
 <body>
 
@@ -109,7 +116,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
 <section class="hero" aria-labelledby="hero-h">
   <img src="assets/hero.jpg" width="1600" height="1000" alt="A massage therapist's hands placing warm dark basalt stones along a client's back, with white flowers on the table" fetchpriority="high" decoding="async">
   <div class="wrap">
-    <p class="eyebrow" style="color:var(--honey-light)">Pueblo · Pueblo West · Colorado Springs</p>
+    <p class="eyebrow" style="color: var(--honey-deep)">Pueblo · Pueblo West · Colorado Springs</p>
     <h1 id="hero-h">In-home massage that comes to you.</h1>
     <p class="sub">The table, fresh linens and hot stones come to your living room. Colorado-licensed, ABMP-insured and woman-owned.</p>
     <div class="cta-row">
@@ -272,9 +279,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-bet
 <div class="footer-sister" style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(128,128,128,0.2);font-size:13px;text-align:center;opacity:0.85;">Southern CO Sister Network: <a href="https://whereeatin.com/">Where We Eatin&#39;</a> &middot; <a href="https://restaurantradar.app/">Restaurant Radar</a> &middot; <a href="https://coloradobounceclub.com/">Colorado Bounce Club</a> &middot; <a href="https://beethelightmassage.com/">Bee The Light Massage</a> &middot; <a href="https://thesoapbook.com/">SOAP Autopilot</a> &middot; <a href="https://baadlandsfarms.com/">Baadlands Farms</a> &middot; <a href="https://politicalpayola.com/">Political Payola</a></div>
 </footer>
 
-<script>
-(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)})})();
-</script>
+<script src="../assets/bee-promo-inline.js"></script>
 <script src="/assets/funnel-beacon.js" defer></script></body>
 </html>
